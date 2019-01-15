@@ -1,10 +1,10 @@
 # 快速开始 Getting Started
 
-滴滴云Java开发者工具套件（didiyun-java-sdk）可让您在java语言环境下不用复杂编程即可访问滴滴云下计算产品线产品及账单类操作。本节介绍如何获取滴滴云java sdk并开始调用。
+滴滴云Java开发者工具套件（didiyun-java-sdk）可让您在java语言环境下不用复杂编程即可访问滴滴云下计算产品线产品及账单类操作。本节介绍如何获取滴滴云java sdk并开始调用。
 
 ## 环境准备
-* 滴滴云java sdk基于java语言，因此，本文默认您已安装java的基本语言环境，将不再进行赘述。
-* 滴滴云java sdk使用OAuth 2.0协议Bearer Token(RFC 6750)形式进行API访问授权。为使用滴滴云Java SDK，您需要为账号生成一个滴滴云API Token。您可在滴滴云控制台中的API Token管理页面上创建您的Token。
+* 滴滴云java sdk基于java语言，因此，本文默认您已安装java的基本语言环境，将不再进行赘述。
+* 滴滴云java sdk使用OAuth 2.0协议Bearer Token(RFC 6750)形式进行API访问授权。为使用滴滴云Java SDK，您需要为账号生成一个滴滴云API Token。您可在滴滴云控制台中的API Token管理页面上创建您的Token。
 
 ## 安装滴滴云Java SDK
 
@@ -16,12 +16,12 @@
 <dependency>
     <groupId>com.didiyun</groupId>
     <artifactId>didiyun-java-sdk</artifactId>
-    <version>1.0.0</version>
+    <version>1.0</version>
 </dependency>
 ```
 
 ## 使用滴滴云Java SDK
-以下代码示例展示了调用滴滴云Java SDK的四个主要步骤：
+以下代码示例展示了调用滴滴云Java SDK的四个主要步骤：
 
 1. 创建一个gRPC Channel
 2. 使用OAuth2 Token验证方式，根据channel创建一个stub
@@ -82,8 +82,8 @@ public class Example {
 }
 ```
 
-# 返回结构与错误处理
-调用滴滴云Java SDK中的所有Client的相应方法均会返回对应的Response，所有类型的Response均包含一个通用的滴滴云Error类型和一个Data字段，如下所示。
+# 返回结构与错误处理
+调用滴滴云Java SDK中的所有Client的相应方法均会返回对应的Response，所有类型的Response均包含一个通用的滴滴云Error类型和一个Data字段，如下所示。
 
 ```java
 public final class ListDc2Response {
@@ -99,7 +99,7 @@ public final class Error {
 ```
 
 滴滴云Java SDK在服务端出错时，会返回相应的的错误信息。在调用结束时，建议您遵循以下步骤对调用响应进行处理：
-1. 对返回响应中的Error中的Errno进行判断，如果不为0，表示服务端产生了错误。
+1. 对返回响应中的Error中的Errno进行判断，如果不为0，表示服务端产生了错误。
 2. 若没有错误，处理返回响应中的Data部分。
 
 ```java
@@ -129,20 +129,20 @@ public class JobInfo {
 }
 ```
 
-您需要初始化CommonStub，并调用jobResult方法，通过jobUuid来轮询获取此任务的进度。
-其中，Done字段表示服务端是否还在处理此任务，Success字段表示处理结果是否成功。
-建议您遵循以下步骤对异步任务进行处理：
-1. 先判断调用响应是否有错误。
-2. 对返回响应中的Done字段进行判断，若为false，则等待片刻重新轮询，若为true，表示任务完成，继续第3步。
-3. 判断Success字段，若为true，表示任务操作成功，若为false，表示任务失败，此时可读取result字段查看错误信息。
+您需要初始化CommonStub，并调用jobResult方法，通过jobUuid来轮询获取此任务的进度。
+其中，Done字段表示服务端是否还在处理此任务，Success字段表示处理结果是否成功。
+建议您遵循以下步骤对异步任务进行处理：
+1. 先判断调用响应是否有错误。
+2. 对返回响应中的Done字段进行判断，若为false，则等待片刻重新轮询，若为true，表示任务完成，继续第3步。
+3. 判断Success字段，若为true，表示任务操作成功，若为false，表示任务失败，此时可读取result字段查看错误信息。
 
-另外，我们在didiyun-java-sdk工程目录中简单实现了一个具有轮询任务功能的简易客户端`com/didiyun/compute/v1/ExampleCommon.java`，谨作参考。
+另外，我们在didiyun-java-sdk工程目录中简单实现了一个具有轮询任务功能的简易客户端`com/didiyun/compute/v1/ExampleCommon.java`，谨作参考。
 
 # 调用与错误示例
 对于滴滴云Java SDK提供的所有接口，文件内均有调用示例，您可通过junit来运行每个接口的调用示例。（部分示例的正确运行需要您手动指定正确参数）。
 
-在调用失败时，您可以通过错误码（Errno）与错误信息（Errmsg）得到调用错误的原因，若无法解决，可联系[滴滴云技术支持](#https://help.didiyun.com/hc/request/new/)。
-常见错误码如下：
+在调用失败时，您可以通过错误码（Errno）与错误信息（Errmsg）得到调用错误的原因，若无法解决，可联系[滴滴云技术支持](#https://help.didiyun.com/hc/request/new/)。
+常见错误码如下：
 
 | 错误码  | 错误信息 |  描述  |
 |-----|-----|-----|

@@ -110,74 +110,74 @@ public final class SnapOuterClass {
       "\0132\032.didi.cloud.base.v1.Header\022\r\n\005start\030\002" +
       " \001(\005\022\r\n\005limit\030\003 \001(\005\022\020\n\010simplify\030\004 \001(\010\022?\n" +
       "\tcondition\030\005 \001(\0132,.didi.cloud.compute.v1" +
-      ".ListSnapshotCondition\":\n\025ListSnapshotCo" +
+      ".ListSnapshotCondition\"K\n\025ListSnapshotCo" +
       "ndition\022\017\n\007ebsUuid\030\001 \001(\t\022\020\n\010snapName\030\002 \001" +
-      "(\t\"o\n\024ListSnapshotResponse\022(\n\005error\030\001 \001(" +
-      "\0132\031.didi.cloud.base.v1.Error\022-\n\004data\030\002 \003" +
-      "(\0132\037.didi.cloud.compute.v1.SnapInfo\"k\n\032G" +
-      "etSnapshotTotalCntRequest\022*\n\006header\030\001 \001(" +
-      "\0132\032.didi.cloud.base.v1.Header\022\017\n\007ebsUuid" +
-      "\030\002 \001(\t\022\020\n\010snapName\030\003 \001(\t\"z\n\033GetSnapshotT" +
-      "otalCntResponse\022(\n\005error\030\001 \001(\0132\031.didi.cl" +
-      "oud.base.v1.Error\0221\n\004data\030\002 \003(\0132#.didi.c" +
-      "loud.compute.v1.TotalCntInfo\"w\n\025CreateSn" +
-      "apshotRequest\022*\n\006header\030\001 \001(\0132\032.didi.clo" +
-      "ud.base.v1.Header\022\017\n\007dc2Uuid\030\002 \001(\t\022\017\n\007eb" +
-      "sUuid\030\003 \001(\t\022\020\n\010snapName\030\004 \001(\t\"m\n\026CreateS" +
-      "napshotResponse\022(\n\005error\030\001 \001(\0132\031.didi.cl" +
-      "oud.base.v1.Error\022)\n\004data\030\002 \003(\0132\033.didi.c" +
-      "loud.base.v1.JobInfo\"\240\001\n\025DeleteSnapshotR" +
-      "equest\022*\n\006header\030\001 \001(\0132\032.didi.cloud.base" +
-      ".v1.Header\022@\n\004snap\030\002 \003(\01322.didi.cloud.co" +
-      "mpute.v1.DeleteSnapshotRequest.Input\032\031\n\005" +
-      "Input\022\020\n\010snapUuid\030\001 \001(\t\"m\n\026DeleteSnapsho" +
+      "(\t\022\017\n\007dc2Uuid\030\003 \001(\t\"o\n\024ListSnapshotRespo" +
+      "nse\022(\n\005error\030\001 \001(\0132\031.didi.cloud.base.v1." +
+      "Error\022-\n\004data\030\002 \003(\0132\037.didi.cloud.compute" +
+      ".v1.SnapInfo\"|\n\032GetSnapshotTotalCntReque" +
+      "st\022*\n\006header\030\001 \001(\0132\032.didi.cloud.base.v1." +
+      "Header\022\017\n\007ebsUuid\030\002 \001(\t\022\020\n\010snapName\030\003 \001(" +
+      "\t\022\017\n\007dc2Uuid\030\004 \001(\t\"z\n\033GetSnapshotTotalCn" +
+      "tResponse\022(\n\005error\030\001 \001(\0132\031.didi.cloud.ba" +
+      "se.v1.Error\0221\n\004data\030\002 \003(\0132#.didi.cloud.c" +
+      "ompute.v1.TotalCntInfo\"w\n\025CreateSnapshot" +
+      "Request\022*\n\006header\030\001 \001(\0132\032.didi.cloud.bas" +
+      "e.v1.Header\022\017\n\007dc2Uuid\030\002 \001(\t\022\017\n\007ebsUuid\030" +
+      "\003 \001(\t\022\020\n\010snapName\030\004 \001(\t\"m\n\026CreateSnapsho" +
       "tResponse\022(\n\005error\030\001 \001(\0132\031.didi.cloud.ba" +
       "se.v1.Error\022)\n\004data\030\002 \003(\0132\033.didi.cloud.b" +
-      "ase.v1.JobInfo\"\303\001\n\025RevertSnapshotRequest" +
+      "ase.v1.JobInfo\"\240\001\n\025DeleteSnapshotRequest" +
       "\022*\n\006header\030\001 \001(\0132\032.didi.cloud.base.v1.He" +
       "ader\022@\n\004snap\030\002 \003(\01322.didi.cloud.compute." +
-      "v1.RevertSnapshotRequest.Input\022\017\n\007stopDc" +
-      "2\030\003 \001(\010\022\020\n\010startDc2\030\004 \001(\010\032\031\n\005Input\022\020\n\010sn" +
-      "apUuid\030\001 \001(\t\"m\n\026RevertSnapshotResponse\022(" +
-      "\n\005error\030\001 \001(\0132\031.didi.cloud.base.v1.Error" +
-      "\022)\n\004data\030\002 \003(\0132\033.didi.cloud.base.v1.JobI" +
-      "nfo\"\331\001\n\031ChangeSnapshotNameRequest\022*\n\006hea" +
-      "der\030\001 \001(\0132\032.didi.cloud.base.v1.Header\022D\n" +
-      "\004snap\030\002 \003(\01326.didi.cloud.compute.v1.Chan" +
-      "geSnapshotNameRequest.Input\022\017\n\007stopDc2\030\003" +
-      " \001(\010\022\020\n\010startDc2\030\004 \001(\010\032\'\n\005Input\022\020\n\010snapU" +
-      "uid\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\"q\n\032ChangeSnapsho" +
-      "tNameResponse\022(\n\005error\030\001 \001(\0132\031.didi.clou" +
-      "d.base.v1.Error\022)\n\004data\030\002 \003(\0132\033.didi.clo" +
-      "ud.base.v1.JobInfo2\276\007\n\004Snap\022\220\001\n\014ListSnap" +
-      "shot\022*.didi.cloud.compute.v1.ListSnapsho" +
-      "tRequest\032+.didi.cloud.compute.v1.ListSna" +
-      "pshotResponse\"\'\202\323\344\223\002!\"\037dicloud/i/storage" +
-      "/snapshot/list\022\246\001\n\023GetSnapshotTotalCnt\0221" +
-      ".didi.cloud.compute.v1.GetSnapshotTotalC" +
-      "ntRequest\0322.didi.cloud.compute.v1.GetSna" +
-      "pshotTotalCntResponse\"(\202\323\344\223\002\"\022 dicloud/i" +
-      "/storage/snapshot/count\022\230\001\n\016CreateSnapsh" +
-      "ot\022,.didi.cloud.compute.v1.CreateSnapsho" +
-      "tRequest\032-.didi.cloud.compute.v1.CreateS" +
-      "napshotResponse\")\202\323\344\223\002#\"!dicloud/i/stora" +
-      "ge/snapshot/assign\022\230\001\n\016DeleteSnapshot\022,." +
-      "didi.cloud.compute.v1.DeleteSnapshotRequ" +
-      "est\032-.didi.cloud.compute.v1.DeleteSnapsh" +
-      "otResponse\")\202\323\344\223\002#\"!dicloud/i/storage/sn" +
-      "apshot/delete\022\230\001\n\016RevertSnapshot\022,.didi." +
-      "cloud.compute.v1.RevertSnapshotRequest\032-" +
-      ".didi.cloud.compute.v1.RevertSnapshotRes" +
-      "ponse\")\202\323\344\223\002#\"!dicloud/i/storage/snapsho" +
-      "t/revert\022\250\001\n\022ChangeSnapshotName\0220.didi.c" +
-      "loud.compute.v1.ChangeSnapshotNameReques" +
-      "t\0321.didi.cloud.compute.v1.ChangeSnapshot" +
-      "NameResponse\"-\202\323\344\223\002\'\"%dicloud/i/storage/" +
-      "snapshot/changeNameB\207\001\n\026com.didiyun.comp" +
-      "ute.v1P\001Z4github.com/didiyun/didiyun-go-" +
-      "sdk/compute/v1;compute\370\001\001\252\002\027Didi.Dicloud" +
-      ".Compute.V1\312\002\027Didi\\Dicloud\\Compute\\V1b\006p" +
-      "roto3"
+      "v1.DeleteSnapshotRequest.Input\032\031\n\005Input\022" +
+      "\020\n\010snapUuid\030\001 \001(\t\"m\n\026DeleteSnapshotRespo" +
+      "nse\022(\n\005error\030\001 \001(\0132\031.didi.cloud.base.v1." +
+      "Error\022)\n\004data\030\002 \003(\0132\033.didi.cloud.base.v1" +
+      ".JobInfo\"\303\001\n\025RevertSnapshotRequest\022*\n\006he" +
+      "ader\030\001 \001(\0132\032.didi.cloud.base.v1.Header\022@" +
+      "\n\004snap\030\002 \003(\01322.didi.cloud.compute.v1.Rev" +
+      "ertSnapshotRequest.Input\022\017\n\007stopDc2\030\003 \001(" +
+      "\010\022\020\n\010startDc2\030\004 \001(\010\032\031\n\005Input\022\020\n\010snapUuid" +
+      "\030\001 \001(\t\"m\n\026RevertSnapshotResponse\022(\n\005erro" +
+      "r\030\001 \001(\0132\031.didi.cloud.base.v1.Error\022)\n\004da" +
+      "ta\030\002 \003(\0132\033.didi.cloud.base.v1.JobInfo\"\331\001" +
+      "\n\031ChangeSnapshotNameRequest\022*\n\006header\030\001 " +
+      "\001(\0132\032.didi.cloud.base.v1.Header\022D\n\004snap\030" +
+      "\002 \003(\01326.didi.cloud.compute.v1.ChangeSnap" +
+      "shotNameRequest.Input\022\017\n\007stopDc2\030\003 \001(\010\022\020" +
+      "\n\010startDc2\030\004 \001(\010\032\'\n\005Input\022\020\n\010snapUuid\030\001 " +
+      "\001(\t\022\014\n\004name\030\002 \001(\t\"q\n\032ChangeSnapshotNameR" +
+      "esponse\022(\n\005error\030\001 \001(\0132\031.didi.cloud.base" +
+      ".v1.Error\022)\n\004data\030\002 \003(\0132\033.didi.cloud.bas" +
+      "e.v1.JobInfo2\276\007\n\004Snap\022\220\001\n\014ListSnapshot\022*" +
+      ".didi.cloud.compute.v1.ListSnapshotReque" +
+      "st\032+.didi.cloud.compute.v1.ListSnapshotR" +
+      "esponse\"\'\202\323\344\223\002!\"\037dicloud/i/storage/snaps" +
+      "hot/list\022\246\001\n\023GetSnapshotTotalCnt\0221.didi." +
+      "cloud.compute.v1.GetSnapshotTotalCntRequ" +
+      "est\0322.didi.cloud.compute.v1.GetSnapshotT" +
+      "otalCntResponse\"(\202\323\344\223\002\"\022 dicloud/i/stora" +
+      "ge/snapshot/count\022\230\001\n\016CreateSnapshot\022,.d" +
+      "idi.cloud.compute.v1.CreateSnapshotReque" +
+      "st\032-.didi.cloud.compute.v1.CreateSnapsho" +
+      "tResponse\")\202\323\344\223\002#\"!dicloud/i/storage/sna" +
+      "pshot/assign\022\230\001\n\016DeleteSnapshot\022,.didi.c" +
+      "loud.compute.v1.DeleteSnapshotRequest\032-." +
+      "didi.cloud.compute.v1.DeleteSnapshotResp" +
+      "onse\")\202\323\344\223\002#\"!dicloud/i/storage/snapshot" +
+      "/delete\022\230\001\n\016RevertSnapshot\022,.didi.cloud." +
+      "compute.v1.RevertSnapshotRequest\032-.didi." +
+      "cloud.compute.v1.RevertSnapshotResponse\"" +
+      ")\202\323\344\223\002#\"!dicloud/i/storage/snapshot/reve" +
+      "rt\022\250\001\n\022ChangeSnapshotName\0220.didi.cloud.c" +
+      "ompute.v1.ChangeSnapshotNameRequest\0321.di" +
+      "di.cloud.compute.v1.ChangeSnapshotNameRe" +
+      "sponse\"-\202\323\344\223\002\'\"%dicloud/i/storage/snapsh" +
+      "ot/changeNameB\207\001\n\026com.didiyun.compute.v1" +
+      "P\001Z4github.com/didiyun/didiyun-go-sdk/co" +
+      "mpute/v1;compute\370\001\001\252\002\027Didi.Dicloud.Compu" +
+      "te.V1\312\002\027Didi\\Dicloud\\Compute\\V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -205,7 +205,7 @@ public final class SnapOuterClass {
     internal_static_didi_cloud_compute_v1_ListSnapshotCondition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_ListSnapshotCondition_descriptor,
-        new java.lang.String[] { "EbsUuid", "SnapName", });
+        new java.lang.String[] { "EbsUuid", "SnapName", "Dc2Uuid", });
     internal_static_didi_cloud_compute_v1_ListSnapshotResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_didi_cloud_compute_v1_ListSnapshotResponse_fieldAccessorTable = new
@@ -217,7 +217,7 @@ public final class SnapOuterClass {
     internal_static_didi_cloud_compute_v1_GetSnapshotTotalCntRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_GetSnapshotTotalCntRequest_descriptor,
-        new java.lang.String[] { "Header", "EbsUuid", "SnapName", });
+        new java.lang.String[] { "Header", "EbsUuid", "SnapName", "Dc2Uuid", });
     internal_static_didi_cloud_compute_v1_GetSnapshotTotalCntResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_didi_cloud_compute_v1_GetSnapshotTotalCntResponse_fieldAccessorTable = new

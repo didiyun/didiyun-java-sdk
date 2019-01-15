@@ -34,7 +34,7 @@ public interface GetSnapshotTotalCntRequestOrBuilder extends
 
   /**
    * <pre>
-   *查询此uuid的EBS的快照
+   *查询此EBS上的快照
    * </pre>
    *
    * <code>string ebsUuid = 2;</code>
@@ -42,7 +42,7 @@ public interface GetSnapshotTotalCntRequestOrBuilder extends
   java.lang.String getEbsUuid();
   /**
    * <pre>
-   *查询此uuid的EBS的快照
+   *查询此EBS上的快照
    * </pre>
    *
    * <code>string ebsUuid = 2;</code>
@@ -67,4 +67,22 @@ public interface GetSnapshotTotalCntRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getSnapNameBytes();
+
+  /**
+   * <pre>
+   *查询此dc2的根盘以及数据盘的快照
+   * </pre>
+   *
+   * <code>string dc2Uuid = 4;</code>
+   */
+  java.lang.String getDc2Uuid();
+  /**
+   * <pre>
+   *查询此dc2的根盘以及数据盘的快照
+   * </pre>
+   *
+   * <code>string dc2Uuid = 4;</code>
+   */
+  com.google.protobuf.ByteString
+      getDc2UuidBytes();
 }

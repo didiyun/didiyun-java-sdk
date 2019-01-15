@@ -18,6 +18,7 @@ private static final long serialVersionUID = 0L;
   private ListSnapshotCondition() {
     ebsUuid_ = "";
     snapName_ = "";
+    dc2Uuid_ = "";
   }
 
   @java.lang.Override
@@ -56,6 +57,12 @@ private static final long serialVersionUID = 0L;
             snapName_ = s;
             break;
           }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            dc2Uuid_ = s;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -92,7 +99,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object ebsUuid_;
   /**
    * <pre>
-   *查询此uuid的EBS的快照
+   *查询此EBS上的快照
    * </pre>
    *
    * <code>string ebsUuid = 1;</code>
@@ -111,7 +118,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *查询此uuid的EBS的快照
+   *查询此EBS上的快照
    * </pre>
    *
    * <code>string ebsUuid = 1;</code>
@@ -172,6 +179,48 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int DC2UUID_FIELD_NUMBER = 3;
+  private volatile java.lang.Object dc2Uuid_;
+  /**
+   * <pre>
+   *查询此dc2的根盘以及数据盘的快照
+   * </pre>
+   *
+   * <code>string dc2Uuid = 3;</code>
+   */
+  public java.lang.String getDc2Uuid() {
+    java.lang.Object ref = dc2Uuid_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      dc2Uuid_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   *查询此dc2的根盘以及数据盘的快照
+   * </pre>
+   *
+   * <code>string dc2Uuid = 3;</code>
+   */
+  public com.google.protobuf.ByteString
+      getDc2UuidBytes() {
+    java.lang.Object ref = dc2Uuid_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      dc2Uuid_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -192,6 +241,9 @@ private static final long serialVersionUID = 0L;
     if (!getSnapNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, snapName_);
     }
+    if (!getDc2UuidBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, dc2Uuid_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -206,6 +258,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!getSnapNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, snapName_);
+    }
+    if (!getDc2UuidBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, dc2Uuid_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -227,6 +282,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEbsUuid());
     result = result && getSnapName()
         .equals(other.getSnapName());
+    result = result && getDc2Uuid()
+        .equals(other.getDc2Uuid());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -242,6 +299,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getEbsUuid().hashCode();
     hash = (37 * hash) + SNAPNAME_FIELD_NUMBER;
     hash = (53 * hash) + getSnapName().hashCode();
+    hash = (37 * hash) + DC2UUID_FIELD_NUMBER;
+    hash = (53 * hash) + getDc2Uuid().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -379,6 +438,8 @@ private static final long serialVersionUID = 0L;
 
       snapName_ = "";
 
+      dc2Uuid_ = "";
+
       return this;
     }
 
@@ -407,6 +468,7 @@ private static final long serialVersionUID = 0L;
       com.didiyun.compute.v1.ListSnapshotCondition result = new com.didiyun.compute.v1.ListSnapshotCondition(this);
       result.ebsUuid_ = ebsUuid_;
       result.snapName_ = snapName_;
+      result.dc2Uuid_ = dc2Uuid_;
       onBuilt();
       return result;
     }
@@ -463,6 +525,10 @@ private static final long serialVersionUID = 0L;
         snapName_ = other.snapName_;
         onChanged();
       }
+      if (!other.getDc2Uuid().isEmpty()) {
+        dc2Uuid_ = other.dc2Uuid_;
+        onChanged();
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -495,7 +561,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object ebsUuid_ = "";
     /**
      * <pre>
-     *查询此uuid的EBS的快照
+     *查询此EBS上的快照
      * </pre>
      *
      * <code>string ebsUuid = 1;</code>
@@ -514,7 +580,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *查询此uuid的EBS的快照
+     *查询此EBS上的快照
      * </pre>
      *
      * <code>string ebsUuid = 1;</code>
@@ -534,7 +600,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *查询此uuid的EBS的快照
+     *查询此EBS上的快照
      * </pre>
      *
      * <code>string ebsUuid = 1;</code>
@@ -551,7 +617,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *查询此uuid的EBS的快照
+     *查询此EBS上的快照
      * </pre>
      *
      * <code>string ebsUuid = 1;</code>
@@ -564,7 +630,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *查询此uuid的EBS的快照
+     *查询此EBS上的快照
      * </pre>
      *
      * <code>string ebsUuid = 1;</code>
@@ -666,6 +732,95 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       snapName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object dc2Uuid_ = "";
+    /**
+     * <pre>
+     *查询此dc2的根盘以及数据盘的快照
+     * </pre>
+     *
+     * <code>string dc2Uuid = 3;</code>
+     */
+    public java.lang.String getDc2Uuid() {
+      java.lang.Object ref = dc2Uuid_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dc2Uuid_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     *查询此dc2的根盘以及数据盘的快照
+     * </pre>
+     *
+     * <code>string dc2Uuid = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDc2UuidBytes() {
+      java.lang.Object ref = dc2Uuid_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dc2Uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     *查询此dc2的根盘以及数据盘的快照
+     * </pre>
+     *
+     * <code>string dc2Uuid = 3;</code>
+     */
+    public Builder setDc2Uuid(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      dc2Uuid_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *查询此dc2的根盘以及数据盘的快照
+     * </pre>
+     *
+     * <code>string dc2Uuid = 3;</code>
+     */
+    public Builder clearDc2Uuid() {
+      
+      dc2Uuid_ = getDefaultInstance().getDc2Uuid();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *查询此dc2的根盘以及数据盘的快照
+     * </pre>
+     *
+     * <code>string dc2Uuid = 3;</code>
+     */
+    public Builder setDc2UuidBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      dc2Uuid_ = value;
       onChanged();
       return this;
     }
