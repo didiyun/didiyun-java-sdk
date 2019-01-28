@@ -51,4 +51,22 @@ public interface CheckEbsPriceInputOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDiskTypeBytes();
+
+  /**
+   * <pre>
+   *当为更改规格时，传此ebsUuid
+   * </pre>
+   *
+   * <code>string ebsUuid = 5;</code>
+   */
+  java.lang.String getEbsUuid();
+  /**
+   * <pre>
+   *当为更改规格时，传此ebsUuid
+   * </pre>
+   *
+   * <code>string ebsUuid = 5;</code>
+   */
+  com.google.protobuf.ByteString
+      getEbsUuidBytes();
 }

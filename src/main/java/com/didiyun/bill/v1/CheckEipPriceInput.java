@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     payPeriod_ = 0;
     bandwidth_ = 0;
     chargeWithFlow_ = false;
+    eipUuid_ = "";
   }
 
   @java.lang.Override
@@ -64,6 +65,12 @@ private static final long serialVersionUID = 0L;
           case 32: {
 
             chargeWithFlow_ = input.readBool();
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            eipUuid_ = s;
             break;
           }
           default: {
@@ -150,6 +157,48 @@ private static final long serialVersionUID = 0L;
     return chargeWithFlow_;
   }
 
+  public static final int EIPUUID_FIELD_NUMBER = 5;
+  private volatile java.lang.Object eipUuid_;
+  /**
+   * <pre>
+   *当为更改规格时，传此eipUuid
+   * </pre>
+   *
+   * <code>string eipUuid = 5;</code>
+   */
+  public java.lang.String getEipUuid() {
+    java.lang.Object ref = eipUuid_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      eipUuid_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   *当为更改规格时，传此eipUuid
+   * </pre>
+   *
+   * <code>string eipUuid = 5;</code>
+   */
+  public com.google.protobuf.ByteString
+      getEipUuidBytes() {
+    java.lang.Object ref = eipUuid_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      eipUuid_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -176,6 +225,9 @@ private static final long serialVersionUID = 0L;
     if (chargeWithFlow_ != false) {
       output.writeBool(4, chargeWithFlow_);
     }
+    if (!getEipUuidBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, eipUuid_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -201,6 +253,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, chargeWithFlow_);
     }
+    if (!getEipUuidBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, eipUuid_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -225,6 +280,8 @@ private static final long serialVersionUID = 0L;
         == other.getBandwidth());
     result = result && (getChargeWithFlow()
         == other.getChargeWithFlow());
+    result = result && getEipUuid()
+        .equals(other.getEipUuid());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -245,6 +302,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + CHARGEWITHFLOW_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getChargeWithFlow());
+    hash = (37 * hash) + EIPUUID_FIELD_NUMBER;
+    hash = (53 * hash) + getEipUuid().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -386,6 +445,8 @@ private static final long serialVersionUID = 0L;
 
       chargeWithFlow_ = false;
 
+      eipUuid_ = "";
+
       return this;
     }
 
@@ -416,6 +477,7 @@ private static final long serialVersionUID = 0L;
       result.payPeriod_ = payPeriod_;
       result.bandwidth_ = bandwidth_;
       result.chargeWithFlow_ = chargeWithFlow_;
+      result.eipUuid_ = eipUuid_;
       onBuilt();
       return result;
     }
@@ -475,6 +537,10 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getChargeWithFlow() != false) {
         setChargeWithFlow(other.getChargeWithFlow());
+      }
+      if (!other.getEipUuid().isEmpty()) {
+        eipUuid_ = other.eipUuid_;
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -653,6 +719,95 @@ private static final long serialVersionUID = 0L;
     public Builder clearChargeWithFlow() {
       
       chargeWithFlow_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object eipUuid_ = "";
+    /**
+     * <pre>
+     *当为更改规格时，传此eipUuid
+     * </pre>
+     *
+     * <code>string eipUuid = 5;</code>
+     */
+    public java.lang.String getEipUuid() {
+      java.lang.Object ref = eipUuid_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        eipUuid_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     *当为更改规格时，传此eipUuid
+     * </pre>
+     *
+     * <code>string eipUuid = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getEipUuidBytes() {
+      java.lang.Object ref = eipUuid_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        eipUuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     *当为更改规格时，传此eipUuid
+     * </pre>
+     *
+     * <code>string eipUuid = 5;</code>
+     */
+    public Builder setEipUuid(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      eipUuid_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *当为更改规格时，传此eipUuid
+     * </pre>
+     *
+     * <code>string eipUuid = 5;</code>
+     */
+    public Builder clearEipUuid() {
+      
+      eipUuid_ = getDefaultInstance().getEipUuid();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *当为更改规格时，传此eipUuid
+     * </pre>
+     *
+     * <code>string eipUuid = 5;</code>
+     */
+    public Builder setEipUuidBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      eipUuid_ = value;
       onChanged();
       return this;
     }

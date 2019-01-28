@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     payPeriod_ = 0;
     dc2Model_ = "";
     ebs_ = java.util.Collections.emptyList();
+    dc2Uuid_ = "";
   }
 
   @java.lang.Override
@@ -82,6 +83,12 @@ private static final long serialVersionUID = 0L;
             }
             ebs_.add(
                 input.readMessage(com.didiyun.bill.v1.CheckEbsPriceInput.parser(), extensionRegistry));
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            dc2Uuid_ = s;
             break;
           }
           default: {
@@ -276,6 +283,48 @@ private static final long serialVersionUID = 0L;
     return ebs_.get(index);
   }
 
+  public static final int DC2UUID_FIELD_NUMBER = 6;
+  private volatile java.lang.Object dc2Uuid_;
+  /**
+   * <pre>
+   *当为更改规格时，传此dc2Uuid
+   * </pre>
+   *
+   * <code>string dc2Uuid = 6;</code>
+   */
+  public java.lang.String getDc2Uuid() {
+    java.lang.Object ref = dc2Uuid_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      dc2Uuid_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   *当为更改规格时，传此dc2Uuid
+   * </pre>
+   *
+   * <code>string dc2Uuid = 6;</code>
+   */
+  public com.google.protobuf.ByteString
+      getDc2UuidBytes() {
+    java.lang.Object ref = dc2Uuid_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      dc2Uuid_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -305,6 +354,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < ebs_.size(); i++) {
       output.writeMessage(5, ebs_.get(i));
     }
+    if (!getDc2UuidBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, dc2Uuid_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -332,6 +384,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < ebs_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, ebs_.get(i));
+    }
+    if (!getDc2UuidBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, dc2Uuid_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -362,6 +417,8 @@ private static final long serialVersionUID = 0L;
     }
     result = result && getEbsList()
         .equals(other.getEbsList());
+    result = result && getDc2Uuid()
+        .equals(other.getDc2Uuid());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -387,6 +444,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EBS_FIELD_NUMBER;
       hash = (53 * hash) + getEbsList().hashCode();
     }
+    hash = (37 * hash) + DC2UUID_FIELD_NUMBER;
+    hash = (53 * hash) + getDc2Uuid().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -539,6 +598,8 @@ private static final long serialVersionUID = 0L;
       } else {
         ebsBuilder_.clear();
       }
+      dc2Uuid_ = "";
+
       return this;
     }
 
@@ -584,6 +645,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.ebs_ = ebsBuilder_.build();
       }
+      result.dc2Uuid_ = dc2Uuid_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -671,6 +733,10 @@ private static final long serialVersionUID = 0L;
             ebsBuilder_.addAllMessages(other.ebs_);
           }
         }
+      }
+      if (!other.getDc2Uuid().isEmpty()) {
+        dc2Uuid_ = other.dc2Uuid_;
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1330,6 +1396,95 @@ private static final long serialVersionUID = 0L;
         ebs_ = null;
       }
       return ebsBuilder_;
+    }
+
+    private java.lang.Object dc2Uuid_ = "";
+    /**
+     * <pre>
+     *当为更改规格时，传此dc2Uuid
+     * </pre>
+     *
+     * <code>string dc2Uuid = 6;</code>
+     */
+    public java.lang.String getDc2Uuid() {
+      java.lang.Object ref = dc2Uuid_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dc2Uuid_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     *当为更改规格时，传此dc2Uuid
+     * </pre>
+     *
+     * <code>string dc2Uuid = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDc2UuidBytes() {
+      java.lang.Object ref = dc2Uuid_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dc2Uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     *当为更改规格时，传此dc2Uuid
+     * </pre>
+     *
+     * <code>string dc2Uuid = 6;</code>
+     */
+    public Builder setDc2Uuid(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      dc2Uuid_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *当为更改规格时，传此dc2Uuid
+     * </pre>
+     *
+     * <code>string dc2Uuid = 6;</code>
+     */
+    public Builder clearDc2Uuid() {
+      
+      dc2Uuid_ = getDefaultInstance().getDc2Uuid();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *当为更改规格时，传此dc2Uuid
+     * </pre>
+     *
+     * <code>string dc2Uuid = 6;</code>
+     */
+    public Builder setDc2UuidBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      dc2Uuid_ = value;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
