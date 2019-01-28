@@ -16,7 +16,7 @@
 <dependency>
     <groupId>com.didiyun</groupId>
     <artifactId>didiyun-java-sdk</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
 </dependency>
 ```
 
