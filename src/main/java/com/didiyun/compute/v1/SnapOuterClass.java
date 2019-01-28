@@ -157,7 +157,7 @@ public final class SnapOuterClass {
       "hot/list\022\246\001\n\023GetSnapshotTotalCnt\0221.didi." +
       "cloud.compute.v1.GetSnapshotTotalCntRequ" +
       "est\0322.didi.cloud.compute.v1.GetSnapshotT" +
-      "otalCntResponse\"(\202\323\344\223\002\"\022 dicloud/i/stora" +
+      "otalCntResponse\"(\202\323\344\223\002\"\" dicloud/i/stora" +
       "ge/snapshot/count\022\230\001\n\016CreateSnapshot\022,.d" +
       "idi.cloud.compute.v1.CreateSnapshotReque" +
       "st\032-.didi.cloud.compute.v1.CreateSnapsho" +

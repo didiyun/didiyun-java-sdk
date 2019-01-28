@@ -157,6 +157,11 @@ private static final long serialVersionUID = 0L;
      * <code>bool proSecurityAgentEnabled = 5;</code>
      */
     boolean getProSecurityAgentEnabled();
+
+    /**
+     * <code>bool monitoringAgentEnabled = 6;</code>
+     */
+    boolean getMonitoringAgentEnabled();
   }
   /**
    * Protobuf type {@code didi.cloud.compute.v1.ReinstallDc2SystemRequest.Input}
@@ -176,6 +181,7 @@ private static final long serialVersionUID = 0L;
       pubKeyUuids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       password_ = "";
       proSecurityAgentEnabled_ = false;
+      monitoringAgentEnabled_ = false;
     }
 
     @java.lang.Override
@@ -232,6 +238,11 @@ private static final long serialVersionUID = 0L;
             case 40: {
 
               proSecurityAgentEnabled_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              monitoringAgentEnabled_ = input.readBool();
               break;
             }
             default: {
@@ -410,6 +421,15 @@ private static final long serialVersionUID = 0L;
       return proSecurityAgentEnabled_;
     }
 
+    public static final int MONITORINGAGENTENABLED_FIELD_NUMBER = 6;
+    private boolean monitoringAgentEnabled_;
+    /**
+     * <code>bool monitoringAgentEnabled = 6;</code>
+     */
+    public boolean getMonitoringAgentEnabled() {
+      return monitoringAgentEnabled_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -438,6 +458,9 @@ private static final long serialVersionUID = 0L;
       }
       if (proSecurityAgentEnabled_ != false) {
         output.writeBool(5, proSecurityAgentEnabled_);
+      }
+      if (monitoringAgentEnabled_ != false) {
+        output.writeBool(6, monitoringAgentEnabled_);
       }
       unknownFields.writeTo(output);
     }
@@ -469,6 +492,10 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, proSecurityAgentEnabled_);
       }
+      if (monitoringAgentEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, monitoringAgentEnabled_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -495,6 +522,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getPassword());
       result = result && (getProSecurityAgentEnabled()
           == other.getProSecurityAgentEnabled());
+      result = result && (getMonitoringAgentEnabled()
+          == other.getMonitoringAgentEnabled());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -519,6 +548,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PROSECURITYAGENTENABLED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getProSecurityAgentEnabled());
+      hash = (37 * hash) + MONITORINGAGENTENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMonitoringAgentEnabled());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -662,6 +694,8 @@ private static final long serialVersionUID = 0L;
 
         proSecurityAgentEnabled_ = false;
 
+        monitoringAgentEnabled_ = false;
+
         return this;
       }
 
@@ -699,6 +733,7 @@ private static final long serialVersionUID = 0L;
         result.pubKeyUuids_ = pubKeyUuids_;
         result.password_ = password_;
         result.proSecurityAgentEnabled_ = proSecurityAgentEnabled_;
+        result.monitoringAgentEnabled_ = monitoringAgentEnabled_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -772,6 +807,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.getProSecurityAgentEnabled() != false) {
           setProSecurityAgentEnabled(other.getProSecurityAgentEnabled());
+        }
+        if (other.getMonitoringAgentEnabled() != false) {
+          setMonitoringAgentEnabled(other.getMonitoringAgentEnabled());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1126,6 +1164,32 @@ private static final long serialVersionUID = 0L;
       public Builder clearProSecurityAgentEnabled() {
         
         proSecurityAgentEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean monitoringAgentEnabled_ ;
+      /**
+       * <code>bool monitoringAgentEnabled = 6;</code>
+       */
+      public boolean getMonitoringAgentEnabled() {
+        return monitoringAgentEnabled_;
+      }
+      /**
+       * <code>bool monitoringAgentEnabled = 6;</code>
+       */
+      public Builder setMonitoringAgentEnabled(boolean value) {
+        
+        monitoringAgentEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool monitoringAgentEnabled = 6;</code>
+       */
+      public Builder clearMonitoringAgentEnabled() {
+        
+        monitoringAgentEnabled_ = false;
         onChanged();
         return this;
       }

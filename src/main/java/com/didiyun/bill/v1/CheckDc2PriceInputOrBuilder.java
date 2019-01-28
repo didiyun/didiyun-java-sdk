@@ -111,4 +111,22 @@ public interface CheckDc2PriceInputOrBuilder extends
    */
   com.didiyun.bill.v1.CheckEbsPriceInputOrBuilder getEbsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   *当为更改规格时，传此dc2Uuid
+   * </pre>
+   *
+   * <code>string dc2Uuid = 6;</code>
+   */
+  java.lang.String getDc2Uuid();
+  /**
+   * <pre>
+   *当为更改规格时，传此dc2Uuid
+   * </pre>
+   *
+   * <code>string dc2Uuid = 6;</code>
+   */
+  com.google.protobuf.ByteString
+      getDc2UuidBytes();
 }

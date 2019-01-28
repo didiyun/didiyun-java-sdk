@@ -42,4 +42,22 @@ public interface CheckEipPriceInputOrBuilder extends
    * <code>bool chargeWithFlow = 4;</code>
    */
   boolean getChargeWithFlow();
+
+  /**
+   * <pre>
+   *当为更改规格时，传此eipUuid
+   * </pre>
+   *
+   * <code>string eipUuid = 5;</code>
+   */
+  java.lang.String getEipUuid();
+  /**
+   * <pre>
+   *当为更改规格时，传此eipUuid
+   * </pre>
+   *
+   * <code>string eipUuid = 5;</code>
+   */
+  com.google.protobuf.ByteString
+      getEipUuidBytes();
 }

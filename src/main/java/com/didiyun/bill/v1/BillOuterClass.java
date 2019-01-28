@@ -277,103 +277,104 @@ public final class BillOuterClass {
       "\0227\n\010resource\030\004 \003(\0132%.didi.cloud.bill.v1." +
       "ResourceItemInput\"H\n\034ChangeExpireStrateg" +
       "yResponse\022(\n\005error\030\001 \001(\0132\031.didi.cloud.ba" +
-      "se.v1.Error\"\262\001\n\022CheckDc2PriceInput\022\r\n\005co" +
+      "se.v1.Error\"\303\001\n\022CheckDc2PriceInput\022\r\n\005co" +
       "unt\030\001 \001(\005\022\021\n\tpayPeriod\030\002 \001(\005\022\020\n\010dc2Model" +
       "\030\003 \001(\t\0223\n\003eip\030\004 \001(\0132&.didi.cloud.bill.v1" +
       ".CheckEipPriceInput\0223\n\003ebs\030\005 \003(\0132&.didi." +
-      "cloud.bill.v1.CheckEbsPriceInput\"a\n\022Chec" +
-      "kEipPriceInput\022\r\n\005count\030\001 \001(\005\022\021\n\tpayPeri" +
-      "od\030\002 \001(\005\022\021\n\tbandwidth\030\003 \001(\005\022\026\n\016chargeWit" +
-      "hFlow\030\004 \001(\010\"V\n\022CheckEbsPriceInput\022\r\n\005cou" +
-      "nt\030\001 \001(\005\022\021\n\tpayPeriod\030\002 \001(\005\022\014\n\004size\030\003 \001(" +
-      "\005\022\020\n\010diskType\030\004 \001(\t\"\243\001\n\024CheckDc2PriceReq" +
-      "uest\022*\n\006header\030\001 \001(\0132\032.didi.cloud.base.v" +
-      "1.Header\022\023\n\013checkCoupon\030\002 \001(\010\022\020\n\010isChang" +
-      "e\030\003 \001(\010\0228\n\010dc2Goods\030\004 \001(\0132&.didi.cloud.b" +
-      "ill.v1.CheckDc2PriceInput\"\243\001\n\024CheckEipPr" +
-      "iceRequest\022*\n\006header\030\001 \001(\0132\032.didi.cloud." +
-      "base.v1.Header\022\023\n\013checkCoupon\030\002 \001(\010\022\020\n\010i" +
-      "sChange\030\003 \001(\010\0228\n\010eipGoods\030\004 \001(\0132&.didi.c" +
-      "loud.bill.v1.CheckEipPriceInput\"\243\001\n\024Chec" +
-      "kEbsPriceRequest\022*\n\006header\030\001 \001(\0132\032.didi." +
-      "cloud.base.v1.Header\022\023\n\013checkCoupon\030\002 \001(" +
-      "\010\022\020\n\010isChange\030\003 \001(\010\0228\n\010ebsGoods\030\004 \001(\0132&." +
-      "didi.cloud.bill.v1.CheckEbsPriceInput\"\345\001" +
-      "\n\016CheckPriceInfo\022\024\n\014bestCouponId\030\001 \001(\t\022\023" +
-      "\n\013cashBalance\030\002 \001(\003\022\025\n\rcouponBalance\030\003 \001" +
-      "(\003\022\023\n\013frozenPrice\030\004 \001(\003\022\027\n\017isClearToCrea" +
-      "te\030\005 \001(\010\022\023\n\013originPrice\030\006 \001(\003\022\017\n\007payType" +
-      "\030\007 \001(\t\022\025\n\rpostPaidPrice\030\010 \001(\003\022\024\n\014prePaid" +
-      "Price\030\t \001(\003\022\020\n\010subPrice\030\n \001(\003\"p\n\022CheckPr" +
-      "iceResponse\022(\n\005error\030\001 \001(\0132\031.didi.cloud." +
-      "base.v1.Error\0220\n\004data\030\002 \001(\0132\".didi.cloud" +
-      ".bill.v1.CheckPriceInfo\"*\n\022GetChargeInfo" +
-      "Input\022\024\n\014resourceUuid\030\001 \001(\t\"\203\001\n\033GetCharg" +
-      "eInfoAndSpecRequest\022*\n\006header\030\001 \001(\0132\032.di" +
-      "di.cloud.base.v1.Header\0228\n\010resource\030\002 \003(" +
-      "\0132&.didi.cloud.bill.v1.GetChargeInfoInpu" +
-      "t\"\207\001\n\024Dc2ChargeInfoAndSpec\022\024\n\014resourceUu" +
-      "id\030\001 \001(\t\022.\n\006charge\030\002 \001(\0132\036.didi.cloud.bi" +
-      "ll.v1.ChargeInfo\022)\n\004spec\030\003 \001(\0132\033.didi.cl" +
-      "oud.bill.v1.Dc2Spec\"\207\001\n\024EipChargeInfoAnd" +
-      "Spec\022\024\n\014resourceUuid\030\001 \001(\t\022.\n\006charge\030\002 \001" +
-      "(\0132\036.didi.cloud.bill.v1.ChargeInfo\022)\n\004sp" +
-      "ec\030\003 \001(\0132\033.didi.cloud.bill.v1.EipSpec\"\207\001" +
-      "\n\024EbsChargeInfoAndSpec\022\024\n\014resourceUuid\030\001" +
-      " \001(\t\022.\n\006charge\030\002 \001(\0132\036.didi.cloud.bill.v" +
-      "1.ChargeInfo\022)\n\004spec\030\003 \001(\0132\033.didi.cloud." +
-      "bill.v1.EbsSpec\"\203\001\n\037GetDc2ChargeInfoAndS" +
-      "pecResponse\022(\n\005error\030\001 \001(\0132\031.didi.cloud." +
-      "base.v1.Error\0226\n\004data\030\002 \003(\0132(.didi.cloud" +
-      ".bill.v1.Dc2ChargeInfoAndSpec\"\203\001\n\037GetEip" +
-      "ChargeInfoAndSpecResponse\022(\n\005error\030\001 \001(\013" +
-      "2\031.didi.cloud.base.v1.Error\0226\n\004data\030\002 \003(" +
-      "\0132(.didi.cloud.bill.v1.EipChargeInfoAndS" +
-      "pec\"\203\001\n\037GetEbsChargeInfoAndSpecResponse\022" +
-      "(\n\005error\030\001 \001(\0132\031.didi.cloud.base.v1.Erro" +
-      "r\0226\n\004data\030\002 \003(\0132(.didi.cloud.bill.v1.Ebs" +
-      "ChargeInfoAndSpec2\330\013\n\004Bill\022\201\001\n\014ContinueL" +
-      "ist\022\'.didi.cloud.bill.v1.ContinueListReq" +
-      "uest\032(.didi.cloud.bill.v1.ContinueListRe" +
-      "sponse\"\036\202\323\344\223\002\030\"\026dicloud/w/continueList\022\215" +
-      "\001\n\017ContinueMonthly\022*.didi.cloud.bill.v1." +
-      "ContinueMonthlyRequest\032+.didi.cloud.bill" +
-      ".v1.ContinueMonthlyResponse\"!\202\323\344\223\002\033\"\031dic" +
-      "loud/w/continueMonthly\022\215\001\n\017ChangeToMonth" +
-      "ly\022*.didi.cloud.bill.v1.ChangeToMonthlyR" +
-      "equest\032+.didi.cloud.bill.v1.ChangeToMont" +
-      "hlyResponse\"!\202\323\344\223\002\033\"\031dicloud/w/changeToM" +
-      "onthly\022\241\001\n\024ChangeExpireStrategy\022/.didi.c" +
-      "loud.bill.v1.ChangeExpireStrategyRequest" +
-      "\0320.didi.cloud.bill.v1.ChangeExpireStrate" +
-      "gyResponse\"&\202\323\344\223\002 \"\036dicloud/w/changeExpi" +
-      "reStrategy\022\177\n\rCheckDc2Price\022(.didi.cloud" +
-      ".bill.v1.CheckDc2PriceRequest\032&.didi.clo" +
-      "ud.bill.v1.CheckPriceResponse\"\034\202\323\344\223\002\026\"\024d" +
-      "icloud/w/checkPrice\022\177\n\rCheckEipPrice\022(.d" +
-      "idi.cloud.bill.v1.CheckEipPriceRequest\032&" +
-      ".didi.cloud.bill.v1.CheckPriceResponse\"\034" +
-      "\202\323\344\223\002\026\"\024dicloud/w/checkPrice\022\177\n\rCheckEbs" +
-      "Price\022(.didi.cloud.bill.v1.CheckEbsPrice" +
-      "Request\032&.didi.cloud.bill.v1.CheckPriceR" +
-      "esponse\"\034\202\323\344\223\002\026\"\024dicloud/w/checkPrice\022\252\001" +
-      "\n\027GetDc2ChargeInfoAndSpec\022/.didi.cloud.b" +
-      "ill.v1.GetChargeInfoAndSpecRequest\0323.did" +
-      "i.cloud.bill.v1.GetDc2ChargeInfoAndSpecR" +
-      "esponse\")\202\323\344\223\002#\"!dicloud/w/getDc2ChargeI" +
-      "nfoAndSpec\022\252\001\n\027GetEipChargeInfoAndSpec\022/" +
-      ".didi.cloud.bill.v1.GetChargeInfoAndSpec" +
-      "Request\0323.didi.cloud.bill.v1.GetEipCharg" +
-      "eInfoAndSpecResponse\")\202\323\344\223\002#\"!dicloud/w/" +
-      "getEipChargeInfoAndSpec\022\252\001\n\027GetEbsCharge" +
-      "InfoAndSpec\022/.didi.cloud.bill.v1.GetChar" +
-      "geInfoAndSpecRequest\0323.didi.cloud.bill.v" +
-      "1.GetEbsChargeInfoAndSpecResponse\")\202\323\344\223\002" +
-      "#\"!dicloud/w/getEbsChargeInfoAndSpecBx\n\023" +
-      "com.didiyun.bill.v1P\001Z.github.com/didiyu" +
-      "n/didiyun-go-sdk/bill/v1;bill\370\001\001\252\002\024Didi." +
-      "Dicloud.Bill.V1\312\002\024Didi\\Dicloud\\Bill\\V1b\006" +
-      "proto3"
+      "cloud.bill.v1.CheckEbsPriceInput\022\017\n\007dc2U" +
+      "uid\030\006 \001(\t\"r\n\022CheckEipPriceInput\022\r\n\005count" +
+      "\030\001 \001(\005\022\021\n\tpayPeriod\030\002 \001(\005\022\021\n\tbandwidth\030\003" +
+      " \001(\005\022\026\n\016chargeWithFlow\030\004 \001(\010\022\017\n\007eipUuid\030" +
+      "\005 \001(\t\"g\n\022CheckEbsPriceInput\022\r\n\005count\030\001 \001" +
+      "(\005\022\021\n\tpayPeriod\030\002 \001(\005\022\014\n\004size\030\003 \001(\005\022\020\n\010d" +
+      "iskType\030\004 \001(\t\022\017\n\007ebsUuid\030\005 \001(\t\"\243\001\n\024Check" +
+      "Dc2PriceRequest\022*\n\006header\030\001 \001(\0132\032.didi.c" +
+      "loud.base.v1.Header\022\023\n\013checkCoupon\030\002 \001(\010" +
+      "\022\020\n\010isChange\030\003 \001(\010\0228\n\010dc2Goods\030\004 \001(\0132&.d" +
+      "idi.cloud.bill.v1.CheckDc2PriceInput\"\243\001\n" +
+      "\024CheckEipPriceRequest\022*\n\006header\030\001 \001(\0132\032." +
+      "didi.cloud.base.v1.Header\022\023\n\013checkCoupon" +
+      "\030\002 \001(\010\022\020\n\010isChange\030\003 \001(\010\0228\n\010eipGoods\030\004 \001" +
+      "(\0132&.didi.cloud.bill.v1.CheckEipPriceInp" +
+      "ut\"\243\001\n\024CheckEbsPriceRequest\022*\n\006header\030\001 " +
+      "\001(\0132\032.didi.cloud.base.v1.Header\022\023\n\013check" +
+      "Coupon\030\002 \001(\010\022\020\n\010isChange\030\003 \001(\010\0228\n\010ebsGoo" +
+      "ds\030\004 \001(\0132&.didi.cloud.bill.v1.CheckEbsPr" +
+      "iceInput\"\345\001\n\016CheckPriceInfo\022\024\n\014bestCoupo" +
+      "nId\030\001 \001(\t\022\023\n\013cashBalance\030\002 \001(\003\022\025\n\rcoupon" +
+      "Balance\030\003 \001(\003\022\023\n\013frozenPrice\030\004 \001(\003\022\027\n\017is" +
+      "ClearToCreate\030\005 \001(\010\022\023\n\013originPrice\030\006 \001(\003" +
+      "\022\017\n\007payType\030\007 \001(\t\022\025\n\rpostPaidPrice\030\010 \001(\003" +
+      "\022\024\n\014prePaidPrice\030\t \001(\003\022\020\n\010subPrice\030\n \001(\003" +
+      "\"p\n\022CheckPriceResponse\022(\n\005error\030\001 \001(\0132\031." +
+      "didi.cloud.base.v1.Error\0220\n\004data\030\002 \001(\0132\"" +
+      ".didi.cloud.bill.v1.CheckPriceInfo\"*\n\022Ge" +
+      "tChargeInfoInput\022\024\n\014resourceUuid\030\001 \001(\t\"\203" +
+      "\001\n\033GetChargeInfoAndSpecRequest\022*\n\006header" +
+      "\030\001 \001(\0132\032.didi.cloud.base.v1.Header\0228\n\010re" +
+      "source\030\002 \003(\0132&.didi.cloud.bill.v1.GetCha" +
+      "rgeInfoInput\"\207\001\n\024Dc2ChargeInfoAndSpec\022\024\n" +
+      "\014resourceUuid\030\001 \001(\t\022.\n\006charge\030\002 \001(\0132\036.di" +
+      "di.cloud.bill.v1.ChargeInfo\022)\n\004spec\030\003 \001(" +
+      "\0132\033.didi.cloud.bill.v1.Dc2Spec\"\207\001\n\024EipCh" +
+      "argeInfoAndSpec\022\024\n\014resourceUuid\030\001 \001(\t\022.\n" +
+      "\006charge\030\002 \001(\0132\036.didi.cloud.bill.v1.Charg" +
+      "eInfo\022)\n\004spec\030\003 \001(\0132\033.didi.cloud.bill.v1" +
+      ".EipSpec\"\207\001\n\024EbsChargeInfoAndSpec\022\024\n\014res" +
+      "ourceUuid\030\001 \001(\t\022.\n\006charge\030\002 \001(\0132\036.didi.c" +
+      "loud.bill.v1.ChargeInfo\022)\n\004spec\030\003 \001(\0132\033." +
+      "didi.cloud.bill.v1.EbsSpec\"\203\001\n\037GetDc2Cha" +
+      "rgeInfoAndSpecResponse\022(\n\005error\030\001 \001(\0132\031." +
+      "didi.cloud.base.v1.Error\0226\n\004data\030\002 \003(\0132(" +
+      ".didi.cloud.bill.v1.Dc2ChargeInfoAndSpec" +
+      "\"\203\001\n\037GetEipChargeInfoAndSpecResponse\022(\n\005" +
+      "error\030\001 \001(\0132\031.didi.cloud.base.v1.Error\0226" +
+      "\n\004data\030\002 \003(\0132(.didi.cloud.bill.v1.EipCha" +
+      "rgeInfoAndSpec\"\203\001\n\037GetEbsChargeInfoAndSp" +
+      "ecResponse\022(\n\005error\030\001 \001(\0132\031.didi.cloud.b" +
+      "ase.v1.Error\0226\n\004data\030\002 \003(\0132(.didi.cloud." +
+      "bill.v1.EbsChargeInfoAndSpec2\330\013\n\004Bill\022\201\001" +
+      "\n\014ContinueList\022\'.didi.cloud.bill.v1.Cont" +
+      "inueListRequest\032(.didi.cloud.bill.v1.Con" +
+      "tinueListResponse\"\036\202\323\344\223\002\030\"\026dicloud/w/con" +
+      "tinueList\022\215\001\n\017ContinueMonthly\022*.didi.clo" +
+      "ud.bill.v1.ContinueMonthlyRequest\032+.didi" +
+      ".cloud.bill.v1.ContinueMonthlyResponse\"!" +
+      "\202\323\344\223\002\033\"\031dicloud/w/continueMonthly\022\215\001\n\017Ch" +
+      "angeToMonthly\022*.didi.cloud.bill.v1.Chang" +
+      "eToMonthlyRequest\032+.didi.cloud.bill.v1.C" +
+      "hangeToMonthlyResponse\"!\202\323\344\223\002\033\"\031dicloud/" +
+      "w/changeToMonthly\022\241\001\n\024ChangeExpireStrate" +
+      "gy\022/.didi.cloud.bill.v1.ChangeExpireStra" +
+      "tegyRequest\0320.didi.cloud.bill.v1.ChangeE" +
+      "xpireStrategyResponse\"&\202\323\344\223\002 \"\036dicloud/w" +
+      "/changeExpireStrategy\022\177\n\rCheckDc2Price\022(" +
+      ".didi.cloud.bill.v1.CheckDc2PriceRequest" +
+      "\032&.didi.cloud.bill.v1.CheckPriceResponse" +
+      "\"\034\202\323\344\223\002\026\"\024dicloud/w/checkPrice\022\177\n\rCheckE" +
+      "ipPrice\022(.didi.cloud.bill.v1.CheckEipPri" +
+      "ceRequest\032&.didi.cloud.bill.v1.CheckPric" +
+      "eResponse\"\034\202\323\344\223\002\026\"\024dicloud/w/checkPrice\022" +
+      "\177\n\rCheckEbsPrice\022(.didi.cloud.bill.v1.Ch" +
+      "eckEbsPriceRequest\032&.didi.cloud.bill.v1." +
+      "CheckPriceResponse\"\034\202\323\344\223\002\026\"\024dicloud/w/ch" +
+      "eckPrice\022\252\001\n\027GetDc2ChargeInfoAndSpec\022/.d" +
+      "idi.cloud.bill.v1.GetChargeInfoAndSpecRe" +
+      "quest\0323.didi.cloud.bill.v1.GetDc2ChargeI" +
+      "nfoAndSpecResponse\")\202\323\344\223\002#\"!dicloud/w/ge" +
+      "tDc2ChargeInfoAndSpec\022\252\001\n\027GetEipChargeIn" +
+      "foAndSpec\022/.didi.cloud.bill.v1.GetCharge" +
+      "InfoAndSpecRequest\0323.didi.cloud.bill.v1." +
+      "GetEipChargeInfoAndSpecResponse\")\202\323\344\223\002#\"" +
+      "!dicloud/w/getEipChargeInfoAndSpec\022\252\001\n\027G" +
+      "etEbsChargeInfoAndSpec\022/.didi.cloud.bill" +
+      ".v1.GetChargeInfoAndSpecRequest\0323.didi.c" +
+      "loud.bill.v1.GetEbsChargeInfoAndSpecResp" +
+      "onse\")\202\323\344\223\002#\"!dicloud/w/getEbsChargeInfo" +
+      "AndSpecBx\n\023com.didiyun.bill.v1P\001Z.github" +
+      ".com/didiyun/didiyun-go-sdk/bill/v1;bill" +
+      "\370\001\001\252\002\024Didi.Dicloud.Bill.V1\312\002\024Didi\\Diclou" +
+      "d\\Bill\\V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -526,19 +527,19 @@ public final class BillOuterClass {
     internal_static_didi_cloud_bill_v1_CheckDc2PriceInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_bill_v1_CheckDc2PriceInput_descriptor,
-        new java.lang.String[] { "Count", "PayPeriod", "Dc2Model", "Eip", "Ebs", });
+        new java.lang.String[] { "Count", "PayPeriod", "Dc2Model", "Eip", "Ebs", "Dc2Uuid", });
     internal_static_didi_cloud_bill_v1_CheckEipPriceInput_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_didi_cloud_bill_v1_CheckEipPriceInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_bill_v1_CheckEipPriceInput_descriptor,
-        new java.lang.String[] { "Count", "PayPeriod", "Bandwidth", "ChargeWithFlow", });
+        new java.lang.String[] { "Count", "PayPeriod", "Bandwidth", "ChargeWithFlow", "EipUuid", });
     internal_static_didi_cloud_bill_v1_CheckEbsPriceInput_descriptor =
       getDescriptor().getMessageTypes().get(22);
     internal_static_didi_cloud_bill_v1_CheckEbsPriceInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_bill_v1_CheckEbsPriceInput_descriptor,
-        new java.lang.String[] { "Count", "PayPeriod", "Size", "DiskType", });
+        new java.lang.String[] { "Count", "PayPeriod", "Size", "DiskType", "EbsUuid", });
     internal_static_didi_cloud_bill_v1_CheckDc2PriceRequest_descriptor =
       getDescriptor().getMessageTypes().get(23);
     internal_static_didi_cloud_bill_v1_CheckDc2PriceRequest_fieldAccessorTable = new

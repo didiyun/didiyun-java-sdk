@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     payPeriod_ = 0;
     size_ = 0;
     diskType_ = "";
+    ebsUuid_ = "";
   }
 
   @java.lang.Override
@@ -65,6 +66,12 @@ private static final long serialVersionUID = 0L;
             java.lang.String s = input.readStringRequireUtf8();
 
             diskType_ = s;
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            ebsUuid_ = s;
             break;
           }
           default: {
@@ -180,6 +187,48 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int EBSUUID_FIELD_NUMBER = 5;
+  private volatile java.lang.Object ebsUuid_;
+  /**
+   * <pre>
+   *当为更改规格时，传此ebsUuid
+   * </pre>
+   *
+   * <code>string ebsUuid = 5;</code>
+   */
+  public java.lang.String getEbsUuid() {
+    java.lang.Object ref = ebsUuid_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      ebsUuid_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   *当为更改规格时，传此ebsUuid
+   * </pre>
+   *
+   * <code>string ebsUuid = 5;</code>
+   */
+  public com.google.protobuf.ByteString
+      getEbsUuidBytes() {
+    java.lang.Object ref = ebsUuid_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      ebsUuid_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -206,6 +255,9 @@ private static final long serialVersionUID = 0L;
     if (!getDiskTypeBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, diskType_);
     }
+    if (!getEbsUuidBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, ebsUuid_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -229,6 +281,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!getDiskTypeBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, diskType_);
+    }
+    if (!getEbsUuidBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, ebsUuid_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -254,6 +309,8 @@ private static final long serialVersionUID = 0L;
         == other.getSize());
     result = result && getDiskType()
         .equals(other.getDiskType());
+    result = result && getEbsUuid()
+        .equals(other.getEbsUuid());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -273,6 +330,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getSize();
     hash = (37 * hash) + DISKTYPE_FIELD_NUMBER;
     hash = (53 * hash) + getDiskType().hashCode();
+    hash = (37 * hash) + EBSUUID_FIELD_NUMBER;
+    hash = (53 * hash) + getEbsUuid().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -414,6 +473,8 @@ private static final long serialVersionUID = 0L;
 
       diskType_ = "";
 
+      ebsUuid_ = "";
+
       return this;
     }
 
@@ -444,6 +505,7 @@ private static final long serialVersionUID = 0L;
       result.payPeriod_ = payPeriod_;
       result.size_ = size_;
       result.diskType_ = diskType_;
+      result.ebsUuid_ = ebsUuid_;
       onBuilt();
       return result;
     }
@@ -503,6 +565,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDiskType().isEmpty()) {
         diskType_ = other.diskType_;
+        onChanged();
+      }
+      if (!other.getEbsUuid().isEmpty()) {
+        ebsUuid_ = other.ebsUuid_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -733,6 +799,95 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       diskType_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object ebsUuid_ = "";
+    /**
+     * <pre>
+     *当为更改规格时，传此ebsUuid
+     * </pre>
+     *
+     * <code>string ebsUuid = 5;</code>
+     */
+    public java.lang.String getEbsUuid() {
+      java.lang.Object ref = ebsUuid_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ebsUuid_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     *当为更改规格时，传此ebsUuid
+     * </pre>
+     *
+     * <code>string ebsUuid = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getEbsUuidBytes() {
+      java.lang.Object ref = ebsUuid_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ebsUuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     *当为更改规格时，传此ebsUuid
+     * </pre>
+     *
+     * <code>string ebsUuid = 5;</code>
+     */
+    public Builder setEbsUuid(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      ebsUuid_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *当为更改规格时，传此ebsUuid
+     * </pre>
+     *
+     * <code>string ebsUuid = 5;</code>
+     */
+    public Builder clearEbsUuid() {
+      
+      ebsUuid_ = getDefaultInstance().getEbsUuid();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *当为更改规格时，传此ebsUuid
+     * </pre>
+     *
+     * <code>string ebsUuid = 5;</code>
+     */
+    public Builder setEbsUuidBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      ebsUuid_ = value;
       onChanged();
       return this;
     }
