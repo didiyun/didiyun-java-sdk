@@ -5,7 +5,7 @@
     <description>java sdk for didiyun</description>
     <artifactId>didiyun-java-sdk</artifactId>
     <packaging>jar</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1</version>
     <name>didiyun-java-sdk</name>
     <url>https://www.didiyun.com</url>
 
