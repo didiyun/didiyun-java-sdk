@@ -403,4 +403,22 @@ public interface CreateDc2RequestOrBuilder extends
    */
   com.didiyun.compute.v1.CreateDc2Request.EbsOrBuilder getEbsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   *创建DC2指定UserData
+   * </pre>
+   *
+   * <code>string userData = 21;</code>
+   */
+  java.lang.String getUserData();
+  /**
+   * <pre>
+   *创建DC2指定UserData
+   * </pre>
+   *
+   * <code>string userData = 21;</code>
+   */
+  com.google.protobuf.ByteString
+      getUserDataBytes();
 }
