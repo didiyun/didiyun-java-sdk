@@ -5,7 +5,7 @@
     <description>java sdk for didiyun</description>
     <artifactId>didiyun-java-sdk</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.2</version>
+    <version>1.0</version>
     <name>didiyun-java-sdk</name>
     <url>https://www.didiyun.com</url>
 
@@ -129,17 +129,6 @@
             <groupId>io.grpc</groupId>
             <artifactId>grpc-alts</artifactId>
             <version>${grpc.version}</version>
-        </dependency>
-	<dependency>
-            <groupId>com.google.protobuf</groupId>
-            <artifactId>protobuf-java-util</artifactId>
-            <version>3.5.1</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.google.guava</groupId>
-                    <artifactId>guava</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
 </project>
