@@ -59,4 +59,58 @@ public interface ListEipConditionOrBuilder extends
    */
   com.google.protobuf.ByteString
       getEipUuidsBytes(int index);
+
+  /**
+   * <pre>
+   *查询未绑定的eip
+   * </pre>
+   *
+   * <code>bool eipNotAttached = 3;</code>
+   */
+  boolean getEipNotAttached();
+
+  /**
+   * <pre>
+   *根据dc2Uuid查询
+   * </pre>
+   *
+   * <code>string dc2Uuid = 4;</code>
+   */
+  java.lang.String getDc2Uuid();
+  /**
+   * <pre>
+   *根据dc2Uuid查询
+   * </pre>
+   *
+   * <code>string dc2Uuid = 4;</code>
+   */
+  com.google.protobuf.ByteString
+      getDc2UuidBytes();
+
+  /**
+   * <pre>
+   *根据dc2名称查询
+   * </pre>
+   *
+   * <code>string dc2Name = 5;</code>
+   */
+  java.lang.String getDc2Name();
+  /**
+   * <pre>
+   *根据dc2名称查询
+   * </pre>
+   *
+   * <code>string dc2Name = 5;</code>
+   */
+  com.google.protobuf.ByteString
+      getDc2NameBytes();
+
+  /**
+   * <pre>
+   *根据出向带宽查询
+   * </pre>
+   *
+   * <code>int32 bandwidth = 6;</code>
+   */
+  int getBandwidth();
 }

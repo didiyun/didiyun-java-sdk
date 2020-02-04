@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     chargeWithFlow_ = false;
     bandwidth_ = 0;
     bindingUuid_ = "";
+    bindingType_ = "";
   }
 
   @java.lang.Override
@@ -107,6 +108,12 @@ private static final long serialVersionUID = 0L;
             java.lang.String s = input.readStringRequireUtf8();
 
             bindingUuid_ = s;
+            break;
+          }
+          case 82: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            bindingType_ = s;
             break;
           }
           default: {
@@ -372,6 +379,48 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int BINDINGTYPE_FIELD_NUMBER = 10;
+  private volatile java.lang.Object bindingType_;
+  /**
+   * <pre>
+   *同时绑定的资源类型,"DC2"或"CPORT"
+   * </pre>
+   *
+   * <code>string bindingType = 10;</code>
+   */
+  public java.lang.String getBindingType() {
+    java.lang.Object ref = bindingType_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      bindingType_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   *同时绑定的资源类型,"DC2"或"CPORT"
+   * </pre>
+   *
+   * <code>string bindingType = 10;</code>
+   */
+  public com.google.protobuf.ByteString
+      getBindingTypeBytes() {
+    java.lang.Object ref = bindingType_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      bindingType_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -412,6 +461,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!getBindingUuidBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, bindingUuid_);
+    }
+    if (!getBindingTypeBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, bindingType_);
     }
     unknownFields.writeTo(output);
   }
@@ -460,6 +512,9 @@ private static final long serialVersionUID = 0L;
     if (!getBindingUuidBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, bindingUuid_);
     }
+    if (!getBindingTypeBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, bindingType_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -497,6 +552,8 @@ private static final long serialVersionUID = 0L;
         == other.getBandwidth());
     result = result && getBindingUuid()
         .equals(other.getBindingUuid());
+    result = result && getBindingType()
+        .equals(other.getBindingType());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -532,6 +589,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getBandwidth();
     hash = (37 * hash) + BINDINGUUID_FIELD_NUMBER;
     hash = (53 * hash) + getBindingUuid().hashCode();
+    hash = (37 * hash) + BINDINGTYPE_FIELD_NUMBER;
+    hash = (53 * hash) + getBindingType().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -687,6 +746,8 @@ private static final long serialVersionUID = 0L;
 
       bindingUuid_ = "";
 
+      bindingType_ = "";
+
       return this;
     }
 
@@ -732,6 +793,7 @@ private static final long serialVersionUID = 0L;
       result.chargeWithFlow_ = chargeWithFlow_;
       result.bandwidth_ = bandwidth_;
       result.bindingUuid_ = bindingUuid_;
+      result.bindingType_ = bindingType_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -815,6 +877,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getBindingUuid().isEmpty()) {
         bindingUuid_ = other.bindingUuid_;
+        onChanged();
+      }
+      if (!other.getBindingType().isEmpty()) {
+        bindingType_ = other.bindingType_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -1494,6 +1560,95 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       bindingUuid_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object bindingType_ = "";
+    /**
+     * <pre>
+     *同时绑定的资源类型,"DC2"或"CPORT"
+     * </pre>
+     *
+     * <code>string bindingType = 10;</code>
+     */
+    public java.lang.String getBindingType() {
+      java.lang.Object ref = bindingType_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bindingType_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     *同时绑定的资源类型,"DC2"或"CPORT"
+     * </pre>
+     *
+     * <code>string bindingType = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getBindingTypeBytes() {
+      java.lang.Object ref = bindingType_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bindingType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     *同时绑定的资源类型,"DC2"或"CPORT"
+     * </pre>
+     *
+     * <code>string bindingType = 10;</code>
+     */
+    public Builder setBindingType(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      bindingType_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *同时绑定的资源类型,"DC2"或"CPORT"
+     * </pre>
+     *
+     * <code>string bindingType = 10;</code>
+     */
+    public Builder clearBindingType() {
+      
+      bindingType_ = getDefaultInstance().getBindingType();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *同时绑定的资源类型,"DC2"或"CPORT"
+     * </pre>
+     *
+     * <code>string bindingType = 10;</code>
+     */
+    public Builder setBindingTypeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      bindingType_ = value;
       onChanged();
       return this;
     }

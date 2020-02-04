@@ -311,142 +311,143 @@ public final class Dc2OuterClass {
       "c2Request.Input\032\030\n\005Input\022\017\n\007dc2Uuid\030\001 \001(" +
       "\t\"g\n\020StartDc2Response\022(\n\005error\030\001 \001(\0132\031.d" +
       "idi.cloud.base.v1.Error\022)\n\004data\030\002 \003(\0132\033." +
-      "didi.cloud.base.v1.JobInfo\"\220\001\n\016StopDc2Re" +
+      "didi.cloud.base.v1.JobInfo\"\255\001\n\016StopDc2Re" +
       "quest\022*\n\006header\030\001 \001(\0132\032.didi.cloud.base." +
       "v1.Header\0228\n\003dc2\030\002 \003(\0132+.didi.cloud.comp" +
-      "ute.v1.StopDc2Request.Input\032\030\n\005Input\022\017\n\007" +
-      "dc2Uuid\030\001 \001(\t\"f\n\017StopDc2Response\022(\n\005erro" +
-      "r\030\001 \001(\0132\031.didi.cloud.base.v1.Error\022)\n\004da" +
-      "ta\030\002 \003(\0132\033.didi.cloud.base.v1.JobInfo\"\224\001" +
-      "\n\020RebootDc2Request\022*\n\006header\030\001 \001(\0132\032.did" +
-      "i.cloud.base.v1.Header\022:\n\003dc2\030\002 \003(\0132-.di" +
-      "di.cloud.compute.v1.RebootDc2Request.Inp" +
-      "ut\032\030\n\005Input\022\017\n\007dc2Uuid\030\001 \001(\t\"h\n\021RebootDc" +
-      "2Response\022(\n\005error\030\001 \001(\0132\031.didi.cloud.ba" +
-      "se.v1.Error\022)\n\004data\030\002 \003(\0132\033.didi.cloud.b" +
-      "ase.v1.JobInfo\"\252\001\n\024ChangeDc2NameRequest\022" +
-      "*\n\006header\030\001 \001(\0132\032.didi.cloud.base.v1.Hea" +
-      "der\022>\n\003dc2\030\002 \003(\01321.didi.cloud.compute.v1" +
-      ".ChangeDc2NameRequest.Input\032&\n\005Input\022\017\n\007" +
-      "dc2Uuid\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\"l\n\025ChangeDc2" +
-      "NameResponse\022(\n\005error\030\001 \001(\0132\031.didi.cloud" +
-      ".base.v1.Error\022)\n\004data\030\002 \003(\0132\033.didi.clou" +
-      "d.base.v1.JobInfo\"\266\001\n\030ChangeDc2PasswordR" +
+      "ute.v1.StopDc2Request.Input\0325\n\005Input\022\017\n\007" +
+      "dc2Uuid\030\001 \001(\t\022\033\n\023stopChargingEnabled\030\002 \001" +
+      "(\010\"f\n\017StopDc2Response\022(\n\005error\030\001 \001(\0132\031.d" +
+      "idi.cloud.base.v1.Error\022)\n\004data\030\002 \003(\0132\033." +
+      "didi.cloud.base.v1.JobInfo\"\224\001\n\020RebootDc2" +
+      "Request\022*\n\006header\030\001 \001(\0132\032.didi.cloud.bas" +
+      "e.v1.Header\022:\n\003dc2\030\002 \003(\0132-.didi.cloud.co" +
+      "mpute.v1.RebootDc2Request.Input\032\030\n\005Input" +
+      "\022\017\n\007dc2Uuid\030\001 \001(\t\"h\n\021RebootDc2Response\022(" +
+      "\n\005error\030\001 \001(\0132\031.didi.cloud.base.v1.Error" +
+      "\022)\n\004data\030\002 \003(\0132\033.didi.cloud.base.v1.JobI" +
+      "nfo\"\252\001\n\024ChangeDc2NameRequest\022*\n\006header\030\001" +
+      " \001(\0132\032.didi.cloud.base.v1.Header\022>\n\003dc2\030" +
+      "\002 \003(\01321.didi.cloud.compute.v1.ChangeDc2N" +
+      "ameRequest.Input\032&\n\005Input\022\017\n\007dc2Uuid\030\001 \001" +
+      "(\t\022\014\n\004name\030\002 \001(\t\"l\n\025ChangeDc2NameRespons" +
+      "e\022(\n\005error\030\001 \001(\0132\031.didi.cloud.base.v1.Er" +
+      "ror\022)\n\004data\030\002 \003(\0132\033.didi.cloud.base.v1.J" +
+      "obInfo\"\266\001\n\030ChangeDc2PasswordRequest\022*\n\006h" +
+      "eader\030\001 \001(\0132\032.didi.cloud.base.v1.Header\022" +
+      "B\n\003dc2\030\002 \003(\01325.didi.cloud.compute.v1.Cha" +
+      "ngeDc2PasswordRequest.Input\032*\n\005Input\022\017\n\007" +
+      "dc2Uuid\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\"p\n\031Chang" +
+      "eDc2PasswordResponse\022(\n\005error\030\001 \001(\0132\031.di" +
+      "di.cloud.base.v1.Error\022)\n\004data\030\002 \003(\0132\033.d" +
+      "idi.cloud.base.v1.JobInfo\"\310\005\n\020CreateDc2R" +
       "equest\022*\n\006header\030\001 \001(\0132\032.didi.cloud.base" +
-      ".v1.Header\022B\n\003dc2\030\002 \003(\01325.didi.cloud.com" +
-      "pute.v1.ChangeDc2PasswordRequest.Input\032*" +
-      "\n\005Input\022\017\n\007dc2Uuid\030\001 \001(\t\022\020\n\010password\030\002 \001" +
-      "(\t\"p\n\031ChangeDc2PasswordResponse\022(\n\005error" +
-      "\030\001 \001(\0132\031.didi.cloud.base.v1.Error\022)\n\004dat" +
-      "a\030\002 \003(\0132\033.didi.cloud.base.v1.JobInfo\"\274\005\n" +
-      "\020CreateDc2Request\022*\n\006header\030\001 \001(\0132\032.didi" +
-      ".cloud.base.v1.Header\022\r\n\005count\030\002 \001(\005\022\024\n\014" +
-      "autoContinue\030\003 \001(\010\022\021\n\tpayPeriod\030\004 \001(\005\022\020\n" +
-      "\010couponId\030\005 \001(\t\022\017\n\007imgUuid\030\006 \001(\t\022\020\n\010snap" +
-      "Uuid\030\007 \001(\t\022\022\n\nsubnetUuid\030\010 \001(\t\022\020\n\010dc2Mod" +
-      "el\030\t \001(\t\022\023\n\013pubKeyUuids\030\n \003(\t\022\020\n\010passwor" +
-      "d\030\013 \001(\t\022\024\n\014rootDiskSize\030\014 \001(\005\022\024\n\014rootDis" +
-      "kType\030\r \001(\t\022\017\n\007sgUuids\030\016 \003(\t\022\014\n\004tags\030\017 \003" +
-      "(\t\022\014\n\004name\030\020 \001(\t\022\037\n\027proSecurityAgentEnab" +
-      "led\030\021 \001(\010\022\036\n\026monitoringAgentEnabled\030\022 \001(" +
-      "\010\0228\n\003eip\030\023 \001(\0132+.didi.cloud.compute.v1.C" +
-      "reateDc2Request.Eip\0228\n\003ebs\030\024 \003(\0132+.didi." +
-      "cloud.compute.v1.CreateDc2Request.Ebs\022\020\n" +
-      "\010userData\030\025 \001(\t\032>\n\003Eip\022\021\n\tbandwidth\030\001 \001(" +
-      "\005\022\014\n\004tags\030\002 \003(\t\022\026\n\016chargeWithFlow\030\003 \001(\010\032" +
-      "b\n\003Ebs\022\r\n\005count\030\001 \001(\005\022\020\n\010snapUuid\030\002 \001(\t\022" +
-      "\020\n\010diskType\030\003 \001(\t\022\014\n\004size\030\004 \001(\005\022\014\n\004name\030" +
-      "\005 \001(\t\022\014\n\004tags\030\006 \003(\t\"h\n\021CreateDc2Response" +
-      "\022(\n\005error\030\001 \001(\0132\031.didi.cloud.base.v1.Err" +
-      "or\022)\n\004data\030\002 \003(\0132\033.didi.cloud.base.v1.Jo" +
-      "bInfo\">\n\020ListImageRequest\022*\n\006header\030\001 \001(" +
-      "\0132\032.didi.cloud.base.v1.Header\"\230\003\n\021ListIm" +
-      "ageResponse\022(\n\005error\030\001 \001(\0132\031.didi.cloud." +
-      "base.v1.Error\022<\n\004data\030\003 \003(\0132..didi.cloud" +
-      ".compute.v1.ListImageResponse.Image\032\232\002\n\005" +
-      "Image\022\017\n\007imgUuid\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\020\n\010" +
-      "osFamily\030\003 \001(\t\022\021\n\tosVersion\030\004 \001(\t\022\020\n\010pla" +
-      "tform\030\005 \001(\t\022\014\n\004type\030\006 \001(\t\022\016\n\006scenes\030\007 \003(" +
-      "\t\022O\n\013requirement\030\010 \001(\0132:.didi.cloud.comp" +
-      "ute.v1.ListImageResponse.Image.Requireme" +
-      "nt\032L\n\013Requirement\022\021\n\tminCpuNum\030\001 \001(\005\022\023\n\013" +
-      "minDiskSize\030\002 \001(\003\022\025\n\rminMemorySize\030\003 \001(\003" +
-      "\"`\n\006SshKey\022\022\n\npubKeyUuid\030\002 \001(\t\022\014\n\004name\030\003" +
-      " \001(\t\022\013\n\003key\030\004 \001(\t\022\023\n\013fingerprint\030\005 \001(\t\022\022" +
-      "\n\ncreateTime\030\006 \001(\003\"?\n\021ListSshKeyRequest\022" +
-      "*\n\006header\030\001 \001(\0132\032.didi.cloud.base.v1.Hea" +
-      "der\"k\n\022ListSshKeyResponse\022(\n\005error\030\001 \001(\013" +
-      "2\031.didi.cloud.base.v1.Error\022+\n\004data\030\002 \003(" +
-      "\0132\035.didi.cloud.compute.v1.SshKey\"\\\n\023Crea" +
-      "teSshKeyRequest\022*\n\006header\030\001 \001(\0132\032.didi.c" +
-      "loud.base.v1.Header\022\014\n\004name\030\002 \001(\t\022\013\n\003key" +
-      "\030\003 \001(\t\"m\n\024CreateSshKeyResponse\022(\n\005error\030" +
-      "\001 \001(\0132\031.didi.cloud.base.v1.Error\022+\n\004data" +
-      "\030\002 \003(\0132\035.didi.cloud.compute.v1.SshKey\"U\n" +
-      "\023DeleteSshKeyRequest\022*\n\006header\030\001 \001(\0132\032.d" +
-      "idi.cloud.base.v1.Header\022\022\n\npubKeyUuid\030\002" +
-      " \001(\t\"@\n\024DeleteSshKeyResponse\022(\n\005error\030\001 " +
-      "\001(\0132\031.didi.cloud.base.v1.Error2\316\021\n\003Dc2\022|" +
-      "\n\007ListDc2\022%.didi.cloud.compute.v1.ListDc" +
-      "2Request\032&.didi.cloud.compute.v1.ListDc2" +
-      "Response\"\"\202\323\344\223\002\034\"\032dicloud/i/compute/dc2/" +
-      "list\022\222\001\n\016GetDc2TotalCnt\022,.didi.cloud.com" +
-      "pute.v1.GetDc2TotalCntRequest\032-.didi.clo" +
-      "ud.compute.v1.GetDc2TotalCntResponse\"#\202\323" +
-      "\344\223\002\035\"\033dicloud/i/compute/dc2/count\022\206\001\n\014Ge" +
-      "tDc2ByUuid\022*.didi.cloud.compute.v1.GetDc" +
-      "2ByUuidRequest\032+.didi.cloud.compute.v1.G" +
-      "etDc2ByUuidResponse\"\035\202\323\344\223\002\027\022\025dicloud/i/c" +
-      "ompute/dc2\022\200\001\n\010StartDc2\022&.didi.cloud.com" +
-      "pute.v1.StartDc2Request\032\'.didi.cloud.com" +
-      "pute.v1.StartDc2Response\"#\202\323\344\223\002\035\"\033diclou" +
-      "d/i/compute/dc2/start\022|\n\007StopDc2\022%.didi." +
-      "cloud.compute.v1.StopDc2Request\032&.didi.c" +
-      "loud.compute.v1.StopDc2Response\"\"\202\323\344\223\002\034\"" +
-      "\032dicloud/i/compute/dc2/stop\022\204\001\n\tRebootDc" +
-      "2\022\'.didi.cloud.compute.v1.RebootDc2Reque" +
-      "st\032(.didi.cloud.compute.v1.RebootDc2Resp" +
-      "onse\"$\202\323\344\223\002\036\"\034dicloud/i/compute/dc2/rebo" +
-      "ot\022\207\001\n\nDestroyDc2\022(.didi.cloud.compute.v" +
-      "1.DestroyDc2Request\032).didi.cloud.compute" +
-      ".v1.DestroyDc2Response\"$\202\323\344\223\002\036\"\034dicloud/" +
-      "i/compute/dc2/delete\022\224\001\n\rChangeDc2Name\022+" +
-      ".didi.cloud.compute.v1.ChangeDc2NameRequ" +
-      "est\032,.didi.cloud.compute.v1.ChangeDc2Nam" +
-      "eResponse\"(\202\323\344\223\002\"\" dicloud/i/compute/dc2" +
-      "/changeName\022\244\001\n\021ChangeDc2Password\022/.didi" +
-      ".cloud.compute.v1.ChangeDc2PasswordReque" +
-      "st\0320.didi.cloud.compute.v1.ChangeDc2Pass" +
-      "wordResponse\",\202\323\344\223\002&\"$dicloud/i/compute/" +
-      "dc2/changePassword\022\242\001\n\022ReinstallDc2Syste" +
-      "m\0220.didi.cloud.compute.v1.ReinstallDc2Sy" +
-      "stemRequest\0321.didi.cloud.compute.v1.Rein" +
-      "stallDc2SystemResponse\"\'\202\323\344\223\002!\"\037dicloud/" +
-      "i/compute/dc2/reinstall\022\204\001\n\tCreateDc2\022\'." +
-      "didi.cloud.compute.v1.CreateDc2Request\032(" +
-      ".didi.cloud.compute.v1.CreateDc2Response" +
-      "\"$\202\323\344\223\002\036\"\034dicloud/i/compute/dc2/assign\022\224" +
-      "\001\n\rChangeDc2Spec\022+.didi.cloud.compute.v1" +
-      ".ChangeDc2SpecRequest\032,.didi.cloud.compu" +
-      "te.v1.ChangeDc2SpecResponse\"(\202\323\344\223\002\"\" dic" +
-      "loud/i/compute/dc2/changeSpec\022|\n\tListIma" +
-      "ge\022\'.didi.cloud.compute.v1.ListImageRequ" +
-      "est\032(.didi.cloud.compute.v1.ListImageRes" +
-      "ponse\"\034\202\323\344\223\002\026\022\024dicloud/i/image/list\022\201\001\n\n" +
-      "ListSshKey\022(.didi.cloud.compute.v1.ListS" +
-      "shKeyRequest\032).didi.cloud.compute.v1.Lis" +
-      "tSshKeyResponse\"\036\202\323\344\223\002\030\022\026dicloud/i/sshke" +
-      "ys/list\022\211\001\n\014CreateSshKey\022*.didi.cloud.co" +
-      "mpute.v1.CreateSshKeyRequest\032+.didi.clou" +
-      "d.compute.v1.CreateSshKeyResponse\" \202\323\344\223\002" +
-      "\032\"\030dicloud/i/sshkeys/create\022\211\001\n\014DeleteSs" +
-      "hKey\022*.didi.cloud.compute.v1.DeleteSshKe" +
-      "yRequest\032+.didi.cloud.compute.v1.DeleteS" +
-      "shKeyResponse\" \202\323\344\223\002\032\"\030dicloud/i/sshkeys" +
-      "/deleteB\207\001\n\026com.didiyun.compute.v1P\001Z4gi" +
-      "thub.com/didiyun/didiyun-go-sdk/compute/" +
-      "v1;compute\370\001\001\252\002\027Didi.Dicloud.Compute.V1\312" +
-      "\002\027Didi\\Dicloud\\Compute\\V1b\006proto3"
+      ".v1.Header\022\r\n\005count\030\002 \001(\005\022\024\n\014autoContinu" +
+      "e\030\003 \001(\010\022\021\n\tpayPeriod\030\004 \001(\005\022\020\n\010couponId\030\005" +
+      " \001(\t\022\017\n\007imgUuid\030\006 \001(\t\022\020\n\010snapUuid\030\007 \001(\t\022" +
+      "\022\n\nsubnetUuid\030\010 \001(\t\022\020\n\010dc2Model\030\t \001(\t\022\023\n" +
+      "\013pubKeyUuids\030\n \003(\t\022\020\n\010password\030\013 \001(\t\022\024\n\014" +
+      "rootDiskSize\030\014 \001(\005\022\024\n\014rootDiskType\030\r \001(\t" +
+      "\022\017\n\007sgUuids\030\016 \003(\t\022\014\n\004tags\030\017 \003(\t\022\014\n\004name\030" +
+      "\020 \001(\t\022\037\n\027proSecurityAgentEnabled\030\021 \001(\010\022\036" +
+      "\n\026monitoringAgentEnabled\030\022 \001(\010\0228\n\003eip\030\023 " +
+      "\001(\0132+.didi.cloud.compute.v1.CreateDc2Req" +
+      "uest.Eip\0228\n\003ebs\030\024 \003(\0132+.didi.cloud.compu" +
+      "te.v1.CreateDc2Request.Ebs\022\020\n\010userData\030\025" +
+      " \001(\t\022\n\n\002ip\030\026 \001(\t\032>\n\003Eip\022\021\n\tbandwidth\030\001 \001" +
+      "(\005\022\014\n\004tags\030\002 \003(\t\022\026\n\016chargeWithFlow\030\003 \001(\010" +
+      "\032b\n\003Ebs\022\r\n\005count\030\001 \001(\005\022\020\n\010snapUuid\030\002 \001(\t" +
+      "\022\020\n\010diskType\030\003 \001(\t\022\014\n\004size\030\004 \001(\005\022\014\n\004name" +
+      "\030\005 \001(\t\022\014\n\004tags\030\006 \003(\t\"h\n\021CreateDc2Respons" +
+      "e\022(\n\005error\030\001 \001(\0132\031.didi.cloud.base.v1.Er" +
+      "ror\022)\n\004data\030\002 \003(\0132\033.didi.cloud.base.v1.J" +
+      "obInfo\">\n\020ListImageRequest\022*\n\006header\030\001 \001" +
+      "(\0132\032.didi.cloud.base.v1.Header\"\230\003\n\021ListI" +
+      "mageResponse\022(\n\005error\030\001 \001(\0132\031.didi.cloud" +
+      ".base.v1.Error\022<\n\004data\030\003 \003(\0132..didi.clou" +
+      "d.compute.v1.ListImageResponse.Image\032\232\002\n" +
+      "\005Image\022\017\n\007imgUuid\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\020\n" +
+      "\010osFamily\030\003 \001(\t\022\021\n\tosVersion\030\004 \001(\t\022\020\n\010pl" +
+      "atform\030\005 \001(\t\022\014\n\004type\030\006 \001(\t\022\016\n\006scenes\030\007 \003" +
+      "(\t\022O\n\013requirement\030\010 \001(\0132:.didi.cloud.com" +
+      "pute.v1.ListImageResponse.Image.Requirem" +
+      "ent\032L\n\013Requirement\022\021\n\tminCpuNum\030\001 \001(\005\022\023\n" +
+      "\013minDiskSize\030\002 \001(\003\022\025\n\rminMemorySize\030\003 \001(" +
+      "\003\"`\n\006SshKey\022\022\n\npubKeyUuid\030\002 \001(\t\022\014\n\004name\030" +
+      "\003 \001(\t\022\013\n\003key\030\004 \001(\t\022\023\n\013fingerprint\030\005 \001(\t\022" +
+      "\022\n\ncreateTime\030\006 \001(\003\"?\n\021ListSshKeyRequest" +
+      "\022*\n\006header\030\001 \001(\0132\032.didi.cloud.base.v1.He" +
+      "ader\"k\n\022ListSshKeyResponse\022(\n\005error\030\001 \001(" +
+      "\0132\031.didi.cloud.base.v1.Error\022+\n\004data\030\002 \003" +
+      "(\0132\035.didi.cloud.compute.v1.SshKey\"\\\n\023Cre" +
+      "ateSshKeyRequest\022*\n\006header\030\001 \001(\0132\032.didi." +
+      "cloud.base.v1.Header\022\014\n\004name\030\002 \001(\t\022\013\n\003ke" +
+      "y\030\003 \001(\t\"m\n\024CreateSshKeyResponse\022(\n\005error" +
+      "\030\001 \001(\0132\031.didi.cloud.base.v1.Error\022+\n\004dat" +
+      "a\030\002 \003(\0132\035.didi.cloud.compute.v1.SshKey\"U" +
+      "\n\023DeleteSshKeyRequest\022*\n\006header\030\001 \001(\0132\032." +
+      "didi.cloud.base.v1.Header\022\022\n\npubKeyUuid\030" +
+      "\002 \001(\t\"@\n\024DeleteSshKeyResponse\022(\n\005error\030\001" +
+      " \001(\0132\031.didi.cloud.base.v1.Error2\316\021\n\003Dc2\022" +
+      "|\n\007ListDc2\022%.didi.cloud.compute.v1.ListD" +
+      "c2Request\032&.didi.cloud.compute.v1.ListDc" +
+      "2Response\"\"\202\323\344\223\002\034\"\032dicloud/i/compute/dc2" +
+      "/list\022\222\001\n\016GetDc2TotalCnt\022,.didi.cloud.co" +
+      "mpute.v1.GetDc2TotalCntRequest\032-.didi.cl" +
+      "oud.compute.v1.GetDc2TotalCntResponse\"#\202" +
+      "\323\344\223\002\035\"\033dicloud/i/compute/dc2/count\022\206\001\n\014G" +
+      "etDc2ByUuid\022*.didi.cloud.compute.v1.GetD" +
+      "c2ByUuidRequest\032+.didi.cloud.compute.v1." +
+      "GetDc2ByUuidResponse\"\035\202\323\344\223\002\027\022\025dicloud/i/" +
+      "compute/dc2\022\200\001\n\010StartDc2\022&.didi.cloud.co" +
+      "mpute.v1.StartDc2Request\032\'.didi.cloud.co" +
+      "mpute.v1.StartDc2Response\"#\202\323\344\223\002\035\"\033diclo" +
+      "ud/i/compute/dc2/start\022|\n\007StopDc2\022%.didi" +
+      ".cloud.compute.v1.StopDc2Request\032&.didi." +
+      "cloud.compute.v1.StopDc2Response\"\"\202\323\344\223\002\034" +
+      "\"\032dicloud/i/compute/dc2/stop\022\204\001\n\tRebootD" +
+      "c2\022\'.didi.cloud.compute.v1.RebootDc2Requ" +
+      "est\032(.didi.cloud.compute.v1.RebootDc2Res" +
+      "ponse\"$\202\323\344\223\002\036\"\034dicloud/i/compute/dc2/reb" +
+      "oot\022\207\001\n\nDestroyDc2\022(.didi.cloud.compute." +
+      "v1.DestroyDc2Request\032).didi.cloud.comput" +
+      "e.v1.DestroyDc2Response\"$\202\323\344\223\002\036\"\034dicloud" +
+      "/i/compute/dc2/delete\022\224\001\n\rChangeDc2Name\022" +
+      "+.didi.cloud.compute.v1.ChangeDc2NameReq" +
+      "uest\032,.didi.cloud.compute.v1.ChangeDc2Na" +
+      "meResponse\"(\202\323\344\223\002\"\" dicloud/i/compute/dc" +
+      "2/changeName\022\244\001\n\021ChangeDc2Password\022/.did" +
+      "i.cloud.compute.v1.ChangeDc2PasswordRequ" +
+      "est\0320.didi.cloud.compute.v1.ChangeDc2Pas" +
+      "swordResponse\",\202\323\344\223\002&\"$dicloud/i/compute" +
+      "/dc2/changePassword\022\242\001\n\022ReinstallDc2Syst" +
+      "em\0220.didi.cloud.compute.v1.ReinstallDc2S" +
+      "ystemRequest\0321.didi.cloud.compute.v1.Rei" +
+      "nstallDc2SystemResponse\"\'\202\323\344\223\002!\"\037dicloud" +
+      "/i/compute/dc2/reinstall\022\204\001\n\tCreateDc2\022\'" +
+      ".didi.cloud.compute.v1.CreateDc2Request\032" +
+      "(.didi.cloud.compute.v1.CreateDc2Respons" +
+      "e\"$\202\323\344\223\002\036\"\034dicloud/i/compute/dc2/assign\022" +
+      "\224\001\n\rChangeDc2Spec\022+.didi.cloud.compute.v" +
+      "1.ChangeDc2SpecRequest\032,.didi.cloud.comp" +
+      "ute.v1.ChangeDc2SpecResponse\"(\202\323\344\223\002\"\" di" +
+      "cloud/i/compute/dc2/changeSpec\022|\n\tListIm" +
+      "age\022\'.didi.cloud.compute.v1.ListImageReq" +
+      "uest\032(.didi.cloud.compute.v1.ListImageRe" +
+      "sponse\"\034\202\323\344\223\002\026\022\024dicloud/i/image/list\022\201\001\n" +
+      "\nListSshKey\022(.didi.cloud.compute.v1.List" +
+      "SshKeyRequest\032).didi.cloud.compute.v1.Li" +
+      "stSshKeyResponse\"\036\202\323\344\223\002\030\022\026dicloud/i/sshk" +
+      "eys/list\022\211\001\n\014CreateSshKey\022*.didi.cloud.c" +
+      "ompute.v1.CreateSshKeyRequest\032+.didi.clo" +
+      "ud.compute.v1.CreateSshKeyResponse\" \202\323\344\223" +
+      "\002\032\"\030dicloud/i/sshkeys/create\022\211\001\n\014DeleteS" +
+      "shKey\022*.didi.cloud.compute.v1.DeleteSshK" +
+      "eyRequest\032+.didi.cloud.compute.v1.Delete" +
+      "SshKeyResponse\" \202\323\344\223\002\032\"\030dicloud/i/sshkey" +
+      "s/deleteB\207\001\n\026com.didiyun.compute.v1P\001Z4g" +
+      "ithub.com/didiyun/didiyun-go-sdk/compute" +
+      "/v1;compute\370\001\001\252\002\027Didi.Dicloud.Compute.V1" +
+      "\312\002\027Didi\\Dicloud\\Compute\\V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -588,7 +589,7 @@ public final class Dc2OuterClass {
     internal_static_didi_cloud_compute_v1_StopDc2Request_Input_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_StopDc2Request_Input_descriptor,
-        new java.lang.String[] { "Dc2Uuid", });
+        new java.lang.String[] { "Dc2Uuid", "StopChargingEnabled", });
     internal_static_didi_cloud_compute_v1_StopDc2Response_descriptor =
       getDescriptor().getMessageTypes().get(16);
     internal_static_didi_cloud_compute_v1_StopDc2Response_fieldAccessorTable = new
@@ -654,7 +655,7 @@ public final class Dc2OuterClass {
     internal_static_didi_cloud_compute_v1_CreateDc2Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_CreateDc2Request_descriptor,
-        new java.lang.String[] { "Header", "Count", "AutoContinue", "PayPeriod", "CouponId", "ImgUuid", "SnapUuid", "SubnetUuid", "Dc2Model", "PubKeyUuids", "Password", "RootDiskSize", "RootDiskType", "SgUuids", "Tags", "Name", "ProSecurityAgentEnabled", "MonitoringAgentEnabled", "Eip", "Ebs", "UserData", });
+        new java.lang.String[] { "Header", "Count", "AutoContinue", "PayPeriod", "CouponId", "ImgUuid", "SnapUuid", "SubnetUuid", "Dc2Model", "PubKeyUuids", "Password", "RootDiskSize", "RootDiskType", "SgUuids", "Tags", "Name", "ProSecurityAgentEnabled", "MonitoringAgentEnabled", "Eip", "Ebs", "UserData", "Ip", });
     internal_static_didi_cloud_compute_v1_CreateDc2Request_Eip_descriptor =
       internal_static_didi_cloud_compute_v1_CreateDc2Request_descriptor.getNestedTypes().get(0);
     internal_static_didi_cloud_compute_v1_CreateDc2Request_Eip_fieldAccessorTable = new

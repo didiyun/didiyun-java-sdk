@@ -35,6 +35,7 @@ private static final long serialVersionUID = 0L;
     monitoringAgentEnabled_ = false;
     ebs_ = java.util.Collections.emptyList();
     userData_ = "";
+    ip_ = "";
   }
 
   @java.lang.Override
@@ -205,6 +206,12 @@ private static final long serialVersionUID = 0L;
             java.lang.String s = input.readStringRequireUtf8();
 
             userData_ = s;
+            break;
+          }
+          case 178: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            ip_ = s;
             break;
           }
           default: {
@@ -2972,7 +2979,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object name_;
   /**
    * <pre>
-   *DC2名字
+   *DC2名称，长度为1~255个字节。批量创建时，可以通过设置命名规则进行有序命名，规则形式如：{offset,bits}，offset代表序列起始值，bits代表序列字符个数（高位补0）。例如，取值为dicloud-{1,4}-web-{2,3}，则第一台DC2的名称为dicloud-0001-web-002。
    * </pre>
    *
    * <code>string name = 16;</code>
@@ -2991,7 +2998,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *DC2名字
+   *DC2名称，长度为1~255个字节。批量创建时，可以通过设置命名规则进行有序命名，规则形式如：{offset,bits}，offset代表序列起始值，bits代表序列字符个数（高位补0）。例如，取值为dicloud-{1,4}-web-{2,3}，则第一台DC2的名称为dicloud-0001-web-002。
    * </pre>
    *
    * <code>string name = 16;</code>
@@ -3166,6 +3173,48 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int IP_FIELD_NUMBER = 22;
+  private volatile java.lang.Object ip_;
+  /**
+   * <pre>
+   *指定网卡IP（IPv4，且必须同时指定子网（subnetUuid））创建DC2。默认自动分配，当指定时，如果该IP在对应子网内已经被使用，则创建报错；如果是批量创建多台DC2，则第一个DC2分配指定IP，其他DC2依次递增分配
+   * </pre>
+   *
+   * <code>string ip = 22;</code>
+   */
+  public java.lang.String getIp() {
+    java.lang.Object ref = ip_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      ip_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   *指定网卡IP（IPv4，且必须同时指定子网（subnetUuid））创建DC2。默认自动分配，当指定时，如果该IP在对应子网内已经被使用，则创建报错；如果是批量创建多台DC2，则第一个DC2分配指定IP，其他DC2依次递增分配
+   * </pre>
+   *
+   * <code>string ip = 22;</code>
+   */
+  public com.google.protobuf.ByteString
+      getIpBytes() {
+    java.lang.Object ref = ip_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      ip_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -3242,6 +3291,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!getUserDataBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 21, userData_);
+    }
+    if (!getIpBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 22, ip_);
     }
     unknownFields.writeTo(output);
   }
@@ -3339,6 +3391,9 @@ private static final long serialVersionUID = 0L;
     if (!getUserDataBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, userData_);
     }
+    if (!getIpBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, ip_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3403,6 +3458,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEbsList());
     result = result && getUserData()
         .equals(other.getUserData());
+    result = result && getIp()
+        .equals(other.getIp());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -3471,6 +3528,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + USERDATA_FIELD_NUMBER;
     hash = (53 * hash) + getUserData().hashCode();
+    hash = (37 * hash) + IP_FIELD_NUMBER;
+    hash = (53 * hash) + getIp().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -3659,6 +3718,8 @@ private static final long serialVersionUID = 0L;
       }
       userData_ = "";
 
+      ip_ = "";
+
       return this;
     }
 
@@ -3736,6 +3797,7 @@ private static final long serialVersionUID = 0L;
         result.ebs_ = ebsBuilder_.build();
       }
       result.userData_ = userData_;
+      result.ip_ = ip_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -3899,6 +3961,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getUserData().isEmpty()) {
         userData_ = other.userData_;
+        onChanged();
+      }
+      if (!other.getIp().isEmpty()) {
+        ip_ = other.ip_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -5252,7 +5318,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object name_ = "";
     /**
      * <pre>
-     *DC2名字
+     *DC2名称，长度为1~255个字节。批量创建时，可以通过设置命名规则进行有序命名，规则形式如：{offset,bits}，offset代表序列起始值，bits代表序列字符个数（高位补0）。例如，取值为dicloud-{1,4}-web-{2,3}，则第一台DC2的名称为dicloud-0001-web-002。
      * </pre>
      *
      * <code>string name = 16;</code>
@@ -5271,7 +5337,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *DC2名字
+     *DC2名称，长度为1~255个字节。批量创建时，可以通过设置命名规则进行有序命名，规则形式如：{offset,bits}，offset代表序列起始值，bits代表序列字符个数（高位补0）。例如，取值为dicloud-{1,4}-web-{2,3}，则第一台DC2的名称为dicloud-0001-web-002。
      * </pre>
      *
      * <code>string name = 16;</code>
@@ -5291,7 +5357,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *DC2名字
+     *DC2名称，长度为1~255个字节。批量创建时，可以通过设置命名规则进行有序命名，规则形式如：{offset,bits}，offset代表序列起始值，bits代表序列字符个数（高位补0）。例如，取值为dicloud-{1,4}-web-{2,3}，则第一台DC2的名称为dicloud-0001-web-002。
      * </pre>
      *
      * <code>string name = 16;</code>
@@ -5308,7 +5374,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *DC2名字
+     *DC2名称，长度为1~255个字节。批量创建时，可以通过设置命名规则进行有序命名，规则形式如：{offset,bits}，offset代表序列起始值，bits代表序列字符个数（高位补0）。例如，取值为dicloud-{1,4}-web-{2,3}，则第一台DC2的名称为dicloud-0001-web-002。
      * </pre>
      *
      * <code>string name = 16;</code>
@@ -5321,7 +5387,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *DC2名字
+     *DC2名称，长度为1~255个字节。批量创建时，可以通过设置命名规则进行有序命名，规则形式如：{offset,bits}，offset代表序列起始值，bits代表序列字符个数（高位补0）。例如，取值为dicloud-{1,4}-web-{2,3}，则第一台DC2的名称为dicloud-0001-web-002。
      * </pre>
      *
      * <code>string name = 16;</code>
@@ -5964,6 +6030,95 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       userData_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object ip_ = "";
+    /**
+     * <pre>
+     *指定网卡IP（IPv4，且必须同时指定子网（subnetUuid））创建DC2。默认自动分配，当指定时，如果该IP在对应子网内已经被使用，则创建报错；如果是批量创建多台DC2，则第一个DC2分配指定IP，其他DC2依次递增分配
+     * </pre>
+     *
+     * <code>string ip = 22;</code>
+     */
+    public java.lang.String getIp() {
+      java.lang.Object ref = ip_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ip_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     *指定网卡IP（IPv4，且必须同时指定子网（subnetUuid））创建DC2。默认自动分配，当指定时，如果该IP在对应子网内已经被使用，则创建报错；如果是批量创建多台DC2，则第一个DC2分配指定IP，其他DC2依次递增分配
+     * </pre>
+     *
+     * <code>string ip = 22;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIpBytes() {
+      java.lang.Object ref = ip_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ip_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     *指定网卡IP（IPv4，且必须同时指定子网（subnetUuid））创建DC2。默认自动分配，当指定时，如果该IP在对应子网内已经被使用，则创建报错；如果是批量创建多台DC2，则第一个DC2分配指定IP，其他DC2依次递增分配
+     * </pre>
+     *
+     * <code>string ip = 22;</code>
+     */
+    public Builder setIp(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      ip_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *指定网卡IP（IPv4，且必须同时指定子网（subnetUuid））创建DC2。默认自动分配，当指定时，如果该IP在对应子网内已经被使用，则创建报错；如果是批量创建多台DC2，则第一个DC2分配指定IP，其他DC2依次递增分配
+     * </pre>
+     *
+     * <code>string ip = 22;</code>
+     */
+    public Builder clearIp() {
+      
+      ip_ = getDefaultInstance().getIp();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *指定网卡IP（IPv4，且必须同时指定子网（subnetUuid））创建DC2。默认自动分配，当指定时，如果该IP在对应子网内已经被使用，则创建报错；如果是批量创建多台DC2，则第一个DC2分配指定IP，其他DC2依次递增分配
+     * </pre>
+     *
+     * <code>string ip = 22;</code>
+     */
+    public Builder setIpBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      ip_ = value;
       onChanged();
       return this;
     }

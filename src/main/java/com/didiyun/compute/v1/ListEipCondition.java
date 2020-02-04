@@ -18,6 +18,10 @@ private static final long serialVersionUID = 0L;
   private ListEipCondition() {
     eip_ = "";
     eipUuids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    eipNotAttached_ = false;
+    dc2Uuid_ = "";
+    dc2Name_ = "";
+    bandwidth_ = 0;
   }
 
   @java.lang.Override
@@ -57,6 +61,28 @@ private static final long serialVersionUID = 0L;
               mutable_bitField0_ |= 0x00000002;
             }
             eipUuids_.add(s);
+            break;
+          }
+          case 24: {
+
+            eipNotAttached_ = input.readBool();
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            dc2Uuid_ = s;
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            dc2Name_ = s;
+            break;
+          }
+          case 48: {
+
+            bandwidth_ = input.readInt32();
             break;
           }
           default: {
@@ -182,6 +208,116 @@ private static final long serialVersionUID = 0L;
     return eipUuids_.getByteString(index);
   }
 
+  public static final int EIPNOTATTACHED_FIELD_NUMBER = 3;
+  private boolean eipNotAttached_;
+  /**
+   * <pre>
+   *查询未绑定的eip
+   * </pre>
+   *
+   * <code>bool eipNotAttached = 3;</code>
+   */
+  public boolean getEipNotAttached() {
+    return eipNotAttached_;
+  }
+
+  public static final int DC2UUID_FIELD_NUMBER = 4;
+  private volatile java.lang.Object dc2Uuid_;
+  /**
+   * <pre>
+   *根据dc2Uuid查询
+   * </pre>
+   *
+   * <code>string dc2Uuid = 4;</code>
+   */
+  public java.lang.String getDc2Uuid() {
+    java.lang.Object ref = dc2Uuid_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      dc2Uuid_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   *根据dc2Uuid查询
+   * </pre>
+   *
+   * <code>string dc2Uuid = 4;</code>
+   */
+  public com.google.protobuf.ByteString
+      getDc2UuidBytes() {
+    java.lang.Object ref = dc2Uuid_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      dc2Uuid_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int DC2NAME_FIELD_NUMBER = 5;
+  private volatile java.lang.Object dc2Name_;
+  /**
+   * <pre>
+   *根据dc2名称查询
+   * </pre>
+   *
+   * <code>string dc2Name = 5;</code>
+   */
+  public java.lang.String getDc2Name() {
+    java.lang.Object ref = dc2Name_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      dc2Name_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   *根据dc2名称查询
+   * </pre>
+   *
+   * <code>string dc2Name = 5;</code>
+   */
+  public com.google.protobuf.ByteString
+      getDc2NameBytes() {
+    java.lang.Object ref = dc2Name_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      dc2Name_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int BANDWIDTH_FIELD_NUMBER = 6;
+  private int bandwidth_;
+  /**
+   * <pre>
+   *根据出向带宽查询
+   * </pre>
+   *
+   * <code>int32 bandwidth = 6;</code>
+   */
+  public int getBandwidth() {
+    return bandwidth_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -201,6 +337,18 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < eipUuids_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, eipUuids_.getRaw(i));
+    }
+    if (eipNotAttached_ != false) {
+      output.writeBool(3, eipNotAttached_);
+    }
+    if (!getDc2UuidBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, dc2Uuid_);
+    }
+    if (!getDc2NameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, dc2Name_);
+    }
+    if (bandwidth_ != 0) {
+      output.writeInt32(6, bandwidth_);
     }
     unknownFields.writeTo(output);
   }
@@ -222,6 +370,20 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getEipUuidsList().size();
     }
+    if (eipNotAttached_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, eipNotAttached_);
+    }
+    if (!getDc2UuidBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, dc2Uuid_);
+    }
+    if (!getDc2NameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, dc2Name_);
+    }
+    if (bandwidth_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(6, bandwidth_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -242,6 +404,14 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEip());
     result = result && getEipUuidsList()
         .equals(other.getEipUuidsList());
+    result = result && (getEipNotAttached()
+        == other.getEipNotAttached());
+    result = result && getDc2Uuid()
+        .equals(other.getDc2Uuid());
+    result = result && getDc2Name()
+        .equals(other.getDc2Name());
+    result = result && (getBandwidth()
+        == other.getBandwidth());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -259,6 +429,15 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EIPUUIDS_FIELD_NUMBER;
       hash = (53 * hash) + getEipUuidsList().hashCode();
     }
+    hash = (37 * hash) + EIPNOTATTACHED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getEipNotAttached());
+    hash = (37 * hash) + DC2UUID_FIELD_NUMBER;
+    hash = (53 * hash) + getDc2Uuid().hashCode();
+    hash = (37 * hash) + DC2NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getDc2Name().hashCode();
+    hash = (37 * hash) + BANDWIDTH_FIELD_NUMBER;
+    hash = (53 * hash) + getBandwidth();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -396,6 +575,14 @@ private static final long serialVersionUID = 0L;
 
       eipUuids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000002);
+      eipNotAttached_ = false;
+
+      dc2Uuid_ = "";
+
+      dc2Name_ = "";
+
+      bandwidth_ = 0;
+
       return this;
     }
 
@@ -430,6 +617,10 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.eipUuids_ = eipUuids_;
+      result.eipNotAttached_ = eipNotAttached_;
+      result.dc2Uuid_ = dc2Uuid_;
+      result.dc2Name_ = dc2Name_;
+      result.bandwidth_ = bandwidth_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -492,6 +683,20 @@ private static final long serialVersionUID = 0L;
           eipUuids_.addAll(other.eipUuids_);
         }
         onChanged();
+      }
+      if (other.getEipNotAttached() != false) {
+        setEipNotAttached(other.getEipNotAttached());
+      }
+      if (!other.getDc2Uuid().isEmpty()) {
+        dc2Uuid_ = other.dc2Uuid_;
+        onChanged();
+      }
+      if (!other.getDc2Name().isEmpty()) {
+        dc2Name_ = other.dc2Name_;
+        onChanged();
+      }
+      if (other.getBandwidth() != 0) {
+        setBandwidth(other.getBandwidth());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -738,6 +943,260 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       ensureEipUuidsIsMutable();
       eipUuids_.add(value);
+      onChanged();
+      return this;
+    }
+
+    private boolean eipNotAttached_ ;
+    /**
+     * <pre>
+     *查询未绑定的eip
+     * </pre>
+     *
+     * <code>bool eipNotAttached = 3;</code>
+     */
+    public boolean getEipNotAttached() {
+      return eipNotAttached_;
+    }
+    /**
+     * <pre>
+     *查询未绑定的eip
+     * </pre>
+     *
+     * <code>bool eipNotAttached = 3;</code>
+     */
+    public Builder setEipNotAttached(boolean value) {
+      
+      eipNotAttached_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *查询未绑定的eip
+     * </pre>
+     *
+     * <code>bool eipNotAttached = 3;</code>
+     */
+    public Builder clearEipNotAttached() {
+      
+      eipNotAttached_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object dc2Uuid_ = "";
+    /**
+     * <pre>
+     *根据dc2Uuid查询
+     * </pre>
+     *
+     * <code>string dc2Uuid = 4;</code>
+     */
+    public java.lang.String getDc2Uuid() {
+      java.lang.Object ref = dc2Uuid_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dc2Uuid_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     *根据dc2Uuid查询
+     * </pre>
+     *
+     * <code>string dc2Uuid = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDc2UuidBytes() {
+      java.lang.Object ref = dc2Uuid_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dc2Uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     *根据dc2Uuid查询
+     * </pre>
+     *
+     * <code>string dc2Uuid = 4;</code>
+     */
+    public Builder setDc2Uuid(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      dc2Uuid_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *根据dc2Uuid查询
+     * </pre>
+     *
+     * <code>string dc2Uuid = 4;</code>
+     */
+    public Builder clearDc2Uuid() {
+      
+      dc2Uuid_ = getDefaultInstance().getDc2Uuid();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *根据dc2Uuid查询
+     * </pre>
+     *
+     * <code>string dc2Uuid = 4;</code>
+     */
+    public Builder setDc2UuidBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      dc2Uuid_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object dc2Name_ = "";
+    /**
+     * <pre>
+     *根据dc2名称查询
+     * </pre>
+     *
+     * <code>string dc2Name = 5;</code>
+     */
+    public java.lang.String getDc2Name() {
+      java.lang.Object ref = dc2Name_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dc2Name_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     *根据dc2名称查询
+     * </pre>
+     *
+     * <code>string dc2Name = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDc2NameBytes() {
+      java.lang.Object ref = dc2Name_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dc2Name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     *根据dc2名称查询
+     * </pre>
+     *
+     * <code>string dc2Name = 5;</code>
+     */
+    public Builder setDc2Name(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      dc2Name_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *根据dc2名称查询
+     * </pre>
+     *
+     * <code>string dc2Name = 5;</code>
+     */
+    public Builder clearDc2Name() {
+      
+      dc2Name_ = getDefaultInstance().getDc2Name();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *根据dc2名称查询
+     * </pre>
+     *
+     * <code>string dc2Name = 5;</code>
+     */
+    public Builder setDc2NameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      dc2Name_ = value;
+      onChanged();
+      return this;
+    }
+
+    private int bandwidth_ ;
+    /**
+     * <pre>
+     *根据出向带宽查询
+     * </pre>
+     *
+     * <code>int32 bandwidth = 6;</code>
+     */
+    public int getBandwidth() {
+      return bandwidth_;
+    }
+    /**
+     * <pre>
+     *根据出向带宽查询
+     * </pre>
+     *
+     * <code>int32 bandwidth = 6;</code>
+     */
+    public Builder setBandwidth(int value) {
+      
+      bandwidth_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *根据出向带宽查询
+     * </pre>
+     *
+     * <code>int32 bandwidth = 6;</code>
+     */
+    public Builder clearBandwidth() {
+      
+      bandwidth_ = 0;
       onChanged();
       return this;
     }

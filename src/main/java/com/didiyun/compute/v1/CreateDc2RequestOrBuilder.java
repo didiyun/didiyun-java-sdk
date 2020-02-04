@@ -301,7 +301,7 @@ public interface CreateDc2RequestOrBuilder extends
 
   /**
    * <pre>
-   *DC2名字
+   *DC2名称，长度为1~255个字节。批量创建时，可以通过设置命名规则进行有序命名，规则形式如：{offset,bits}，offset代表序列起始值，bits代表序列字符个数（高位补0）。例如，取值为dicloud-{1,4}-web-{2,3}，则第一台DC2的名称为dicloud-0001-web-002。
    * </pre>
    *
    * <code>string name = 16;</code>
@@ -309,7 +309,7 @@ public interface CreateDc2RequestOrBuilder extends
   java.lang.String getName();
   /**
    * <pre>
-   *DC2名字
+   *DC2名称，长度为1~255个字节。批量创建时，可以通过设置命名规则进行有序命名，规则形式如：{offset,bits}，offset代表序列起始值，bits代表序列字符个数（高位补0）。例如，取值为dicloud-{1,4}-web-{2,3}，则第一台DC2的名称为dicloud-0001-web-002。
    * </pre>
    *
    * <code>string name = 16;</code>
@@ -421,4 +421,22 @@ public interface CreateDc2RequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUserDataBytes();
+
+  /**
+   * <pre>
+   *指定网卡IP（IPv4，且必须同时指定子网（subnetUuid））创建DC2。默认自动分配，当指定时，如果该IP在对应子网内已经被使用，则创建报错；如果是批量创建多台DC2，则第一个DC2分配指定IP，其他DC2依次递增分配
+   * </pre>
+   *
+   * <code>string ip = 22;</code>
+   */
+  java.lang.String getIp();
+  /**
+   * <pre>
+   *指定网卡IP（IPv4，且必须同时指定子网（subnetUuid））创建DC2。默认自动分配，当指定时，如果该IP在对应子网内已经被使用，则创建报错；如果是批量创建多台DC2，则第一个DC2分配指定IP，其他DC2依次递增分配
+   * </pre>
+   *
+   * <code>string ip = 22;</code>
+   */
+  com.google.protobuf.ByteString
+      getIpBytes();
 }
