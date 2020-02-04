@@ -60,6 +60,11 @@ public final class CommonOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_didi_cloud_compute_v1_SgRuleInfo_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_didi_cloud_compute_v1_CportInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_didi_cloud_compute_v1_CportInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_didi_cloud_compute_v1_JobResultRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -156,33 +161,39 @@ public final class CommonOuterClass {
       "\001(\t\022\021\n\tisDefault\030\t \001(\010\022)\n\002sg\030\n \001(\0132\035.did" +
       "i.cloud.compute.v1.SgInfo\022+\n\003vpc\030\013 \001(\0132\036" +
       ".didi.cloud.compute.v1.VpcInfo\022(\n\003job\030\014 " +
-      "\001(\0132\033.didi.cloud.base.v1.JobInfo\"P\n\020JobR" +
-      "esultRequest\022*\n\006header\030\001 \001(\0132\032.didi.clou" +
-      "d.base.v1.Header\022\020\n\010jobUuids\030\002 \003(\t\"h\n\021Jo" +
-      "bResultResponse\022(\n\005error\030\001 \001(\0132\031.didi.cl" +
-      "oud.base.v1.Error\022)\n\004data\030\002 \003(\0132\033.didi.c" +
-      "loud.base.v1.JobInfo\"\262\001\n\030ListRegionAndZo" +
-      "neRequest\022*\n\006header\030\001 \001(\0132\032.didi.cloud.b" +
-      "ase.v1.Header\022L\n\tcondition\030\002 \001(\01329.didi." +
-      "cloud.compute.v1.ListRegionAndZoneReques" +
-      "t.Condition\032\034\n\tCondition\022\017\n\007product\030\001 \001(" +
-      "\t\"d\n\nRegionData\022\020\n\010areaName\030\001 \001(\t\022\n\n\002id\030" +
-      "\002 \001(\t\022\014\n\004name\030\003 \001(\t\022*\n\004zone\030\004 \003(\0132\034.didi" +
-      ".cloud.base.v1.ZoneInfo\"v\n\031ListRegionAnd" +
-      "ZoneResponse\022(\n\005error\030\001 \001(\0132\031.didi.cloud" +
-      ".base.v1.Error\022/\n\004data\030\002 \003(\0132!.didi.clou" +
-      "d.compute.v1.RegionData2\232\002\n\006Common\022x\n\tJo" +
-      "bResult\022\'.didi.cloud.compute.v1.JobResul" +
-      "tRequest\032(.didi.cloud.compute.v1.JobResu" +
-      "ltResponse\"\030\202\323\344\223\002\022\022\020dicloud/i/result\022\225\001\n" +
-      "\021ListRegionAndZone\022/.didi.cloud.compute." +
-      "v1.ListRegionAndZoneRequest\0320.didi.cloud" +
-      ".compute.v1.ListRegionAndZoneResponse\"\035\202" +
-      "\323\344\223\002\027\"\025dicloud/i/region/listB\207\001\n\026com.did" +
-      "iyun.compute.v1P\001Z4github.com/didiyun/di" +
-      "diyun-go-sdk/compute/v1;compute\370\001\001\252\002\027Did" +
-      "i.Dicloud.Compute.V1\312\002\027Didi\\Dicloud\\Comp" +
-      "ute\\V1b\006proto3"
+      "\001(\0132\033.didi.cloud.base.v1.JobInfo\"\363\001\n\tCpo" +
+      "rtInfo\022\021\n\tcportUuid\030\001 \001(\t\022\n\n\002ip\030\002 \001(\t\022\023\n" +
+      "\013containerId\030\003 \001(\t\022\013\n\003mac\030\004 \001(\t\022\017\n\007netma" +
+      "sk\030\005 \001(\t\022\017\n\007podName\030\006 \001(\t\022\r\n\005podNs\030\007 \001(\t" +
+      "\022\021\n\tvmNicUuid\030\010 \001(\t\022\017\n\007gateway\030\t \001(\t\022\022\n\n" +
+      "createTime\030\n \001(\003\022\022\n\nupdateTime\030\013 \001(\003\022(\n\003" +
+      "job\030\014 \001(\0132\033.didi.cloud.base.v1.JobInfo\"P" +
+      "\n\020JobResultRequest\022*\n\006header\030\001 \001(\0132\032.did" +
+      "i.cloud.base.v1.Header\022\020\n\010jobUuids\030\002 \003(\t" +
+      "\"h\n\021JobResultResponse\022(\n\005error\030\001 \001(\0132\031.d" +
+      "idi.cloud.base.v1.Error\022)\n\004data\030\002 \003(\0132\033." +
+      "didi.cloud.base.v1.JobInfo\"\262\001\n\030ListRegio" +
+      "nAndZoneRequest\022*\n\006header\030\001 \001(\0132\032.didi.c" +
+      "loud.base.v1.Header\022L\n\tcondition\030\002 \001(\01329" +
+      ".didi.cloud.compute.v1.ListRegionAndZone" +
+      "Request.Condition\032\034\n\tCondition\022\017\n\007produc" +
+      "t\030\001 \001(\t\"d\n\nRegionData\022\020\n\010areaName\030\001 \001(\t\022" +
+      "\n\n\002id\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022*\n\004zone\030\004 \003(\0132" +
+      "\034.didi.cloud.base.v1.ZoneInfo\"v\n\031ListReg" +
+      "ionAndZoneResponse\022(\n\005error\030\001 \001(\0132\031.didi" +
+      ".cloud.base.v1.Error\022/\n\004data\030\002 \003(\0132!.did" +
+      "i.cloud.compute.v1.RegionData2\232\002\n\006Common" +
+      "\022x\n\tJobResult\022\'.didi.cloud.compute.v1.Jo" +
+      "bResultRequest\032(.didi.cloud.compute.v1.J" +
+      "obResultResponse\"\030\202\323\344\223\002\022\022\020dicloud/i/resu" +
+      "lt\022\225\001\n\021ListRegionAndZone\022/.didi.cloud.co" +
+      "mpute.v1.ListRegionAndZoneRequest\0320.didi" +
+      ".cloud.compute.v1.ListRegionAndZoneRespo" +
+      "nse\"\035\202\323\344\223\002\027\"\025dicloud/i/region/listB\207\001\n\026c" +
+      "om.didiyun.compute.v1P\001Z4github.com/didi" +
+      "yun/didiyun-go-sdk/compute/v1;compute\370\001\001" +
+      "\252\002\027Didi.Dicloud.Compute.V1\312\002\027Didi\\Diclou" +
+      "d\\Compute\\V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -253,20 +264,26 @@ public final class CommonOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_SgRuleInfo_descriptor,
         new java.lang.String[] { "SgRuleUuid", "CreateTime", "UpdateTime", "Type", "Protocol", "StartPort", "EndPort", "AllowedCidr", "IsDefault", "Sg", "Vpc", "Job", });
-    internal_static_didi_cloud_compute_v1_JobResultRequest_descriptor =
+    internal_static_didi_cloud_compute_v1_CportInfo_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_didi_cloud_compute_v1_CportInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_didi_cloud_compute_v1_CportInfo_descriptor,
+        new java.lang.String[] { "CportUuid", "Ip", "ContainerId", "Mac", "Netmask", "PodName", "PodNs", "VmNicUuid", "Gateway", "CreateTime", "UpdateTime", "Job", });
+    internal_static_didi_cloud_compute_v1_JobResultRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
     internal_static_didi_cloud_compute_v1_JobResultRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_JobResultRequest_descriptor,
         new java.lang.String[] { "Header", "JobUuids", });
     internal_static_didi_cloud_compute_v1_JobResultResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_didi_cloud_compute_v1_JobResultResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_JobResultResponse_descriptor,
         new java.lang.String[] { "Error", "Data", });
     internal_static_didi_cloud_compute_v1_ListRegionAndZoneRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_didi_cloud_compute_v1_ListRegionAndZoneRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_ListRegionAndZoneRequest_descriptor,
@@ -278,13 +295,13 @@ public final class CommonOuterClass {
         internal_static_didi_cloud_compute_v1_ListRegionAndZoneRequest_Condition_descriptor,
         new java.lang.String[] { "Product", });
     internal_static_didi_cloud_compute_v1_RegionData_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_didi_cloud_compute_v1_RegionData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_RegionData_descriptor,
         new java.lang.String[] { "AreaName", "Id", "Name", "Zone", });
     internal_static_didi_cloud_compute_v1_ListRegionAndZoneResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_didi_cloud_compute_v1_ListRegionAndZoneResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_ListRegionAndZoneResponse_descriptor,

@@ -90,6 +90,21 @@ public final class EipOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_didi_cloud_compute_v1_DeleteEipResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_didi_cloud_compute_v1_ExpungeEipRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_didi_cloud_compute_v1_ExpungeEipRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_didi_cloud_compute_v1_ExpungeEipRequest_Input_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_didi_cloud_compute_v1_ExpungeEipRequest_Input_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_didi_cloud_compute_v1_ExpungeEipResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_didi_cloud_compute_v1_ExpungeEipResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_didi_cloud_compute_v1_AttachEipToDc2Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -133,93 +148,106 @@ public final class EipOuterClass {
       "mmon.proto\032\034google/api/annotations.proto" +
       "\"i\n\017ListEipResponse\022(\n\005error\030\001 \001(\0132\031.did" +
       "i.cloud.base.v1.Error\022,\n\004data\030\002 \003(\0132\036.di" +
-      "di.cloud.compute.v1.EipInfo\"1\n\020ListEipCo" +
-      "ndition\022\013\n\003eip\030\001 \001(\t\022\020\n\010eipUuids\030\002 \003(\t\"\250" +
-      "\001\n\016ListEipRequest\022*\n\006header\030\001 \001(\0132\032.didi" +
-      ".cloud.base.v1.Header\022\r\n\005start\030\002 \001(\005\022\r\n\005" +
-      "limit\030\003 \001(\005\022\020\n\010simplify\030\004 \001(\010\022:\n\tconditi" +
-      "on\030\005 \001(\0132\'.didi.cloud.compute.v1.ListEip" +
-      "Condition\"b\n\025GetEipTotalCntRequest\022*\n\006he" +
-      "ader\030\001 \001(\0132\032.didi.cloud.base.v1.Header\022\013" +
-      "\n\003eip\030\002 \001(\t\022\020\n\010eipUuids\030\003 \003(\t\"u\n\026GetEipT" +
-      "otalCntResponse\022(\n\005error\030\001 \001(\0132\031.didi.cl" +
-      "oud.base.v1.Error\0221\n\004data\030\002 \003(\0132#.didi.c" +
-      "loud.compute.v1.TotalCntInfo\"R\n\023GetEipBy" +
-      "UuidRequest\022*\n\006header\030\001 \001(\0132\032.didi.cloud" +
-      ".base.v1.Header\022\017\n\007eipUuid\030\002 \001(\t\"n\n\024GetE" +
-      "ipByUuidResponse\022(\n\005error\030\001 \001(\0132\031.didi.c" +
-      "loud.base.v1.Error\022,\n\004data\030\002 \003(\0132\036.didi." +
-      "cloud.compute.v1.EipInfo\"\326\001\n\020CreateEipRe" +
-      "quest\022*\n\006header\030\001 \001(\0132\032.didi.cloud.base." +
-      "v1.Header\022\021\n\tpayPeriod\030\002 \001(\005\022\024\n\014autoCont" +
-      "inue\030\003 \001(\010\022\r\n\005count\030\004 \001(\005\022\020\n\010couponId\030\005 " +
-      "\001(\t\022\014\n\004tags\030\006 \003(\t\022\026\n\016chargeWithFlow\030\007 \001(" +
-      "\010\022\021\n\tbandwidth\030\010 \001(\005\022\023\n\013bindingUuid\030\t \001(" +
-      "\t\"h\n\021CreateEipResponse\022(\n\005error\030\001 \001(\0132\031." +
+      "di.cloud.compute.v1.EipInfo\"~\n\020ListEipCo" +
+      "ndition\022\013\n\003eip\030\001 \001(\t\022\020\n\010eipUuids\030\002 \003(\t\022\026" +
+      "\n\016eipNotAttached\030\003 \001(\010\022\017\n\007dc2Uuid\030\004 \001(\t\022" +
+      "\017\n\007dc2Name\030\005 \001(\t\022\021\n\tbandwidth\030\006 \001(\005\"\250\001\n\016" +
+      "ListEipRequest\022*\n\006header\030\001 \001(\0132\032.didi.cl" +
+      "oud.base.v1.Header\022\r\n\005start\030\002 \001(\005\022\r\n\005lim" +
+      "it\030\003 \001(\005\022\020\n\010simplify\030\004 \001(\010\022:\n\tcondition\030" +
+      "\005 \001(\0132\'.didi.cloud.compute.v1.ListEipCon" +
+      "dition\"b\n\025GetEipTotalCntRequest\022*\n\006heade" +
+      "r\030\001 \001(\0132\032.didi.cloud.base.v1.Header\022\013\n\003e" +
+      "ip\030\002 \001(\t\022\020\n\010eipUuids\030\003 \003(\t\"u\n\026GetEipTota" +
+      "lCntResponse\022(\n\005error\030\001 \001(\0132\031.didi.cloud" +
+      ".base.v1.Error\0221\n\004data\030\002 \003(\0132#.didi.clou" +
+      "d.compute.v1.TotalCntInfo\"R\n\023GetEipByUui" +
+      "dRequest\022*\n\006header\030\001 \001(\0132\032.didi.cloud.ba" +
+      "se.v1.Header\022\017\n\007eipUuid\030\002 \001(\t\"n\n\024GetEipB" +
+      "yUuidResponse\022(\n\005error\030\001 \001(\0132\031.didi.clou" +
+      "d.base.v1.Error\022,\n\004data\030\002 \003(\0132\036.didi.clo" +
+      "ud.compute.v1.EipInfo\"\353\001\n\020CreateEipReque" +
+      "st\022*\n\006header\030\001 \001(\0132\032.didi.cloud.base.v1." +
+      "Header\022\021\n\tpayPeriod\030\002 \001(\005\022\024\n\014autoContinu" +
+      "e\030\003 \001(\010\022\r\n\005count\030\004 \001(\005\022\020\n\010couponId\030\005 \001(\t" +
+      "\022\014\n\004tags\030\006 \003(\t\022\026\n\016chargeWithFlow\030\007 \001(\010\022\021" +
+      "\n\tbandwidth\030\010 \001(\005\022\023\n\013bindingUuid\030\t \001(\t\022\023" +
+      "\n\013bindingType\030\n \001(\t\"h\n\021CreateEipResponse" +
+      "\022(\n\005error\030\001 \001(\0132\031.didi.cloud.base.v1.Err" +
+      "or\022)\n\004data\030\002 \003(\0132\033.didi.cloud.base.v1.Jo" +
+      "bInfo\"\343\001\n\031ChangeEipBandwidthRequest\022*\n\006h" +
+      "eader\030\001 \001(\0132\032.didi.cloud.base.v1.Header\022" +
+      "\020\n\010couponId\030\002 \001(\t\022C\n\003eip\030\003 \003(\01326.didi.cl" +
+      "oud.compute.v1.ChangeEipBandwidthRequest" +
+      ".Input\032C\n\005Input\022\017\n\007eipUuid\030\001 \001(\t\022\021\n\tband" +
+      "width\030\002 \001(\005\022\026\n\016chargeWithFlow\030\003 \001(\010\"q\n\032C" +
+      "hangeEipBandwidthResponse\022(\n\005error\030\001 \001(\013" +
+      "2\031.didi.cloud.base.v1.Error\022)\n\004data\030\002 \003(" +
+      "\0132\033.didi.cloud.base.v1.JobInfo\"\224\001\n\020Delet" +
+      "eEipRequest\022*\n\006header\030\001 \001(\0132\032.didi.cloud" +
+      ".base.v1.Header\022:\n\003eip\030\002 \003(\0132-.didi.clou" +
+      "d.compute.v1.DeleteEipRequest.Input\032\030\n\005I" +
+      "nput\022\017\n\007eipUuid\030\001 \001(\t\"h\n\021DeleteEipRespon" +
+      "se\022(\n\005error\030\001 \001(\0132\031.didi.cloud.base.v1.E" +
+      "rror\022)\n\004data\030\002 \003(\0132\033.didi.cloud.base.v1." +
+      "JobInfo\"\226\001\n\021ExpungeEipRequest\022*\n\006header\030" +
+      "\001 \001(\0132\032.didi.cloud.base.v1.Header\022;\n\003eip" +
+      "\030\002 \003(\0132..didi.cloud.compute.v1.ExpungeEi" +
+      "pRequest.Input\032\030\n\005Input\022\017\n\007eipUuid\030\001 \001(\t" +
+      "\"i\n\022ExpungeEipResponse\022(\n\005error\030\001 \001(\0132\031." +
       "didi.cloud.base.v1.Error\022)\n\004data\030\002 \003(\0132\033" +
-      ".didi.cloud.base.v1.JobInfo\"\343\001\n\031ChangeEi" +
-      "pBandwidthRequest\022*\n\006header\030\001 \001(\0132\032.didi" +
-      ".cloud.base.v1.Header\022\020\n\010couponId\030\002 \001(\t\022" +
-      "C\n\003eip\030\003 \003(\01326.didi.cloud.compute.v1.Cha" +
-      "ngeEipBandwidthRequest.Input\032C\n\005Input\022\017\n" +
-      "\007eipUuid\030\001 \001(\t\022\021\n\tbandwidth\030\002 \001(\005\022\026\n\016cha" +
-      "rgeWithFlow\030\003 \001(\010\"q\n\032ChangeEipBandwidthR" +
-      "esponse\022(\n\005error\030\001 \001(\0132\031.didi.cloud.base" +
-      ".v1.Error\022)\n\004data\030\002 \003(\0132\033.didi.cloud.bas" +
-      "e.v1.JobInfo\"\224\001\n\020DeleteEipRequest\022*\n\006hea" +
-      "der\030\001 \001(\0132\032.didi.cloud.base.v1.Header\022:\n" +
-      "\003eip\030\002 \003(\0132-.didi.cloud.compute.v1.Delet" +
-      "eEipRequest.Input\032\030\n\005Input\022\017\n\007eipUuid\030\001 " +
-      "\001(\t\"h\n\021DeleteEipResponse\022(\n\005error\030\001 \001(\0132" +
-      "\031.didi.cloud.base.v1.Error\022)\n\004data\030\002 \003(\013" +
-      "2\033.didi.cloud.base.v1.JobInfo\"\263\001\n\025Attach" +
-      "EipToDc2Request\022*\n\006header\030\001 \001(\0132\032.didi.c" +
-      "loud.base.v1.Header\022?\n\003eip\030\002 \003(\01322.didi." +
-      "cloud.compute.v1.AttachEipToDc2Request.I" +
-      "nput\032-\n\005Input\022\017\n\007eipUuid\030\001 \001(\t\022\023\n\013bindin" +
-      "gUuid\030\002 \001(\t\"m\n\026AttachEipToDc2Response\022(\n" +
-      "\005error\030\001 \001(\0132\031.didi.cloud.base.v1.Error\022" +
-      ")\n\004data\030\002 \003(\0132\033.didi.cloud.base.v1.JobIn" +
-      "fo\"\242\001\n\027DetachEipFromDc2Request\022*\n\006header" +
-      "\030\001 \001(\0132\032.didi.cloud.base.v1.Header\022A\n\003ei" +
-      "p\030\002 \003(\01324.didi.cloud.compute.v1.DetachEi" +
-      "pFromDc2Request.Input\032\030\n\005Input\022\017\n\007eipUui" +
-      "d\030\001 \001(\t\"o\n\030DetachEipFromDc2Response\022(\n\005e" +
-      "rror\030\001 \001(\0132\031.didi.cloud.base.v1.Error\022)\n" +
-      "\004data\030\002 \003(\0132\033.didi.cloud.base.v1.JobInfo" +
-      "2\214\t\n\003Eip\022|\n\007ListEip\022%.didi.cloud.compute" +
-      ".v1.ListEipRequest\032&.didi.cloud.compute." +
-      "v1.ListEipResponse\"\"\202\323\344\223\002\034\"\032dicloud/i/ne" +
-      "twork/eip/list\022\222\001\n\016GetEipTotalCnt\022,.didi" +
-      ".cloud.compute.v1.GetEipTotalCntRequest\032" +
-      "-.didi.cloud.compute.v1.GetEipTotalCntRe" +
-      "sponse\"#\202\323\344\223\002\035\"\033dicloud/i/network/eip/co" +
-      "unt\022\206\001\n\014GetEipByUuid\022*.didi.cloud.comput" +
-      "e.v1.GetEipByUuidRequest\032+.didi.cloud.co" +
-      "mpute.v1.GetEipByUuidResponse\"\035\202\323\344\223\002\027\022\025d" +
-      "icloud/i/network/eip\022\204\001\n\tCreateEip\022\'.did" +
-      "i.cloud.compute.v1.CreateEipRequest\032(.di" +
-      "di.cloud.compute.v1.CreateEipResponse\"$\202" +
-      "\323\344\223\002\036\"\034dicloud/i/network/eip/assign\022\250\001\n\022" +
-      "ChangeEipBandwidth\0220.didi.cloud.compute." +
-      "v1.ChangeEipBandwidthRequest\0321.didi.clou" +
-      "d.compute.v1.ChangeEipBandwidthResponse\"" +
-      "-\202\323\344\223\002\'\"%dicloud/i/network/eip/changeBan" +
-      "dwidth\022\204\001\n\tDeleteEip\022\'.didi.cloud.comput" +
-      "e.v1.DeleteEipRequest\032(.didi.cloud.compu" +
-      "te.v1.DeleteEipResponse\"$\202\323\344\223\002\036\"\034dicloud" +
-      "/i/network/eip/delete\022\223\001\n\016AttachEipToDc2" +
-      "\022,.didi.cloud.compute.v1.AttachEipToDc2R" +
-      "equest\032-.didi.cloud.compute.v1.AttachEip" +
-      "ToDc2Response\"$\202\323\344\223\002\036\"\034dicloud/i/network" +
-      "/eip/attach\022\231\001\n\020DetachEipFromDc2\022..didi." +
-      "cloud.compute.v1.DetachEipFromDc2Request" +
-      "\032/.didi.cloud.compute.v1.DetachEipFromDc" +
-      "2Response\"$\202\323\344\223\002\036\"\034dicloud/i/network/eip" +
-      "/detachB\207\001\n\026com.didiyun.compute.v1P\001Z4gi" +
-      "thub.com/didiyun/didiyun-go-sdk/compute/" +
-      "v1;compute\370\001\001\252\002\027Didi.Dicloud.Compute.V1\312" +
-      "\002\027Didi\\Dicloud\\Compute\\V1b\006proto3"
+      ".didi.cloud.base.v1.JobInfo\"\310\001\n\025AttachEi" +
+      "pToDc2Request\022*\n\006header\030\001 \001(\0132\032.didi.clo" +
+      "ud.base.v1.Header\022?\n\003eip\030\002 \003(\01322.didi.cl" +
+      "oud.compute.v1.AttachEipToDc2Request.Inp" +
+      "ut\032B\n\005Input\022\017\n\007eipUuid\030\001 \001(\t\022\023\n\013bindingU" +
+      "uid\030\002 \001(\t\022\023\n\013bindingType\030\003 \001(\t\"m\n\026Attach" +
+      "EipToDc2Response\022(\n\005error\030\001 \001(\0132\031.didi.c" +
+      "loud.base.v1.Error\022)\n\004data\030\002 \003(\0132\033.didi." +
+      "cloud.base.v1.JobInfo\"\242\001\n\027DetachEipFromD" +
+      "c2Request\022*\n\006header\030\001 \001(\0132\032.didi.cloud.b" +
+      "ase.v1.Header\022A\n\003eip\030\002 \003(\01324.didi.cloud." +
+      "compute.v1.DetachEipFromDc2Request.Input" +
+      "\032\030\n\005Input\022\017\n\007eipUuid\030\001 \001(\t\"o\n\030DetachEipF" +
+      "romDc2Response\022(\n\005error\030\001 \001(\0132\031.didi.clo" +
+      "ud.base.v1.Error\022)\n\004data\030\002 \003(\0132\033.didi.cl" +
+      "oud.base.v1.JobInfo2\227\n\n\003Eip\022|\n\007ListEip\022%" +
+      ".didi.cloud.compute.v1.ListEipRequest\032&." +
+      "didi.cloud.compute.v1.ListEipResponse\"\"\202" +
+      "\323\344\223\002\034\"\032dicloud/i/network/eip/list\022\222\001\n\016Ge" +
+      "tEipTotalCnt\022,.didi.cloud.compute.v1.Get" +
+      "EipTotalCntRequest\032-.didi.cloud.compute." +
+      "v1.GetEipTotalCntResponse\"#\202\323\344\223\002\035\"\033diclo" +
+      "ud/i/network/eip/count\022\206\001\n\014GetEipByUuid\022" +
+      "*.didi.cloud.compute.v1.GetEipByUuidRequ" +
+      "est\032+.didi.cloud.compute.v1.GetEipByUuid" +
+      "Response\"\035\202\323\344\223\002\027\022\025dicloud/i/network/eip\022" +
+      "\204\001\n\tCreateEip\022\'.didi.cloud.compute.v1.Cr" +
+      "eateEipRequest\032(.didi.cloud.compute.v1.C" +
+      "reateEipResponse\"$\202\323\344\223\002\036\"\034dicloud/i/netw" +
+      "ork/eip/assign\022\250\001\n\022ChangeEipBandwidth\0220." +
+      "didi.cloud.compute.v1.ChangeEipBandwidth" +
+      "Request\0321.didi.cloud.compute.v1.ChangeEi" +
+      "pBandwidthResponse\"-\202\323\344\223\002\'\"%dicloud/i/ne" +
+      "twork/eip/changeBandwidth\022\204\001\n\tDeleteEip\022" +
+      "\'.didi.cloud.compute.v1.DeleteEipRequest" +
+      "\032(.didi.cloud.compute.v1.DeleteEipRespon" +
+      "se\"$\202\323\344\223\002\036\"\034dicloud/i/network/eip/delete" +
+      "\022\210\001\n\nExpungeEip\022(.didi.cloud.compute.v1." +
+      "ExpungeEipRequest\032).didi.cloud.compute.v" +
+      "1.ExpungeEipResponse\"%\202\323\344\223\002\037\"\035dicloud/i/" +
+      "network/eip/expunge\022\223\001\n\016AttachEipToDc2\022," +
+      ".didi.cloud.compute.v1.AttachEipToDc2Req" +
+      "uest\032-.didi.cloud.compute.v1.AttachEipTo" +
+      "Dc2Response\"$\202\323\344\223\002\036\"\034dicloud/i/network/e" +
+      "ip/attach\022\231\001\n\020DetachEipFromDc2\022..didi.cl" +
+      "oud.compute.v1.DetachEipFromDc2Request\032/" +
+      ".didi.cloud.compute.v1.DetachEipFromDc2R" +
+      "esponse\"$\202\323\344\223\002\036\"\034dicloud/i/network/eip/d" +
+      "etachB\207\001\n\026com.didiyun.compute.v1P\001Z4gith" +
+      "ub.com/didiyun/didiyun-go-sdk/compute/v1" +
+      ";compute\370\001\001\252\002\027Didi.Dicloud.Compute.V1\312\002\027" +
+      "Didi\\Dicloud\\Compute\\V1b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -247,7 +275,7 @@ public final class EipOuterClass {
     internal_static_didi_cloud_compute_v1_ListEipCondition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_ListEipCondition_descriptor,
-        new java.lang.String[] { "Eip", "EipUuids", });
+        new java.lang.String[] { "Eip", "EipUuids", "EipNotAttached", "Dc2Uuid", "Dc2Name", "Bandwidth", });
     internal_static_didi_cloud_compute_v1_ListEipRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_didi_cloud_compute_v1_ListEipRequest_fieldAccessorTable = new
@@ -283,7 +311,7 @@ public final class EipOuterClass {
     internal_static_didi_cloud_compute_v1_CreateEipRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_CreateEipRequest_descriptor,
-        new java.lang.String[] { "Header", "PayPeriod", "AutoContinue", "Count", "CouponId", "Tags", "ChargeWithFlow", "Bandwidth", "BindingUuid", });
+        new java.lang.String[] { "Header", "PayPeriod", "AutoContinue", "Count", "CouponId", "Tags", "ChargeWithFlow", "Bandwidth", "BindingUuid", "BindingType", });
     internal_static_didi_cloud_compute_v1_CreateEipResponse_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_didi_cloud_compute_v1_CreateEipResponse_fieldAccessorTable = new
@@ -326,8 +354,26 @@ public final class EipOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_DeleteEipResponse_descriptor,
         new java.lang.String[] { "Error", "Data", });
-    internal_static_didi_cloud_compute_v1_AttachEipToDc2Request_descriptor =
+    internal_static_didi_cloud_compute_v1_ExpungeEipRequest_descriptor =
       getDescriptor().getMessageTypes().get(13);
+    internal_static_didi_cloud_compute_v1_ExpungeEipRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_didi_cloud_compute_v1_ExpungeEipRequest_descriptor,
+        new java.lang.String[] { "Header", "Eip", });
+    internal_static_didi_cloud_compute_v1_ExpungeEipRequest_Input_descriptor =
+      internal_static_didi_cloud_compute_v1_ExpungeEipRequest_descriptor.getNestedTypes().get(0);
+    internal_static_didi_cloud_compute_v1_ExpungeEipRequest_Input_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_didi_cloud_compute_v1_ExpungeEipRequest_Input_descriptor,
+        new java.lang.String[] { "EipUuid", });
+    internal_static_didi_cloud_compute_v1_ExpungeEipResponse_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_didi_cloud_compute_v1_ExpungeEipResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_didi_cloud_compute_v1_ExpungeEipResponse_descriptor,
+        new java.lang.String[] { "Error", "Data", });
+    internal_static_didi_cloud_compute_v1_AttachEipToDc2Request_descriptor =
+      getDescriptor().getMessageTypes().get(15);
     internal_static_didi_cloud_compute_v1_AttachEipToDc2Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_AttachEipToDc2Request_descriptor,
@@ -337,15 +383,15 @@ public final class EipOuterClass {
     internal_static_didi_cloud_compute_v1_AttachEipToDc2Request_Input_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_AttachEipToDc2Request_Input_descriptor,
-        new java.lang.String[] { "EipUuid", "BindingUuid", });
+        new java.lang.String[] { "EipUuid", "BindingUuid", "BindingType", });
     internal_static_didi_cloud_compute_v1_AttachEipToDc2Response_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_didi_cloud_compute_v1_AttachEipToDc2Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_AttachEipToDc2Response_descriptor,
         new java.lang.String[] { "Error", "Data", });
     internal_static_didi_cloud_compute_v1_DetachEipFromDc2Request_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_didi_cloud_compute_v1_DetachEipFromDc2Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_DetachEipFromDc2Request_descriptor,
@@ -357,7 +403,7 @@ public final class EipOuterClass {
         internal_static_didi_cloud_compute_v1_DetachEipFromDc2Request_Input_descriptor,
         new java.lang.String[] { "EipUuid", });
     internal_static_didi_cloud_compute_v1_DetachEipFromDc2Response_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_didi_cloud_compute_v1_DetachEipFromDc2Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_didi_cloud_compute_v1_DetachEipFromDc2Response_descriptor,

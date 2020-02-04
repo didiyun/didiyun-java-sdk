@@ -147,4 +147,22 @@ public interface CreateEipRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getBindingUuidBytes();
+
+  /**
+   * <pre>
+   *同时绑定的资源类型,"DC2"或"CPORT"
+   * </pre>
+   *
+   * <code>string bindingType = 10;</code>
+   */
+  java.lang.String getBindingType();
+  /**
+   * <pre>
+   *同时绑定的资源类型,"DC2"或"CPORT"
+   * </pre>
+   *
+   * <code>string bindingType = 10;</code>
+   */
+  com.google.protobuf.ByteString
+      getBindingTypeBytes();
 }

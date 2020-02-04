@@ -219,6 +219,38 @@ public final class EipGrpc {
      return getDeleteEipMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.didiyun.compute.v1.ExpungeEipRequest,
+      com.didiyun.compute.v1.ExpungeEipResponse> getExpungeEipMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ExpungeEip",
+      requestType = com.didiyun.compute.v1.ExpungeEipRequest.class,
+      responseType = com.didiyun.compute.v1.ExpungeEipResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.didiyun.compute.v1.ExpungeEipRequest,
+      com.didiyun.compute.v1.ExpungeEipResponse> getExpungeEipMethod() {
+    io.grpc.MethodDescriptor<com.didiyun.compute.v1.ExpungeEipRequest, com.didiyun.compute.v1.ExpungeEipResponse> getExpungeEipMethod;
+    if ((getExpungeEipMethod = EipGrpc.getExpungeEipMethod) == null) {
+      synchronized (EipGrpc.class) {
+        if ((getExpungeEipMethod = EipGrpc.getExpungeEipMethod) == null) {
+          EipGrpc.getExpungeEipMethod = getExpungeEipMethod = 
+              io.grpc.MethodDescriptor.<com.didiyun.compute.v1.ExpungeEipRequest, com.didiyun.compute.v1.ExpungeEipResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "didi.cloud.compute.v1.Eip", "ExpungeEip"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.didiyun.compute.v1.ExpungeEipRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.didiyun.compute.v1.ExpungeEipResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new EipMethodDescriptorSupplier("ExpungeEip"))
+                  .build();
+          }
+        }
+     }
+     return getExpungeEipMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.didiyun.compute.v1.AttachEipToDc2Request,
       com.didiyun.compute.v1.AttachEipToDc2Response> getAttachEipToDc2Method;
 
@@ -372,6 +404,16 @@ public final class EipGrpc {
 
     /**
      * <pre>
+     * 销毁eip
+     * </pre>
+     */
+    public void expungeEip(com.didiyun.compute.v1.ExpungeEipRequest request,
+        io.grpc.stub.StreamObserver<com.didiyun.compute.v1.ExpungeEipResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getExpungeEipMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * 绑定eip到dc2
      * </pre>
      */
@@ -434,6 +476,13 @@ public final class EipGrpc {
                 com.didiyun.compute.v1.DeleteEipRequest,
                 com.didiyun.compute.v1.DeleteEipResponse>(
                   this, METHODID_DELETE_EIP)))
+          .addMethod(
+            getExpungeEipMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.didiyun.compute.v1.ExpungeEipRequest,
+                com.didiyun.compute.v1.ExpungeEipResponse>(
+                  this, METHODID_EXPUNGE_EIP)))
           .addMethod(
             getAttachEipToDc2Method(),
             asyncUnaryCall(
@@ -538,6 +587,17 @@ public final class EipGrpc {
 
     /**
      * <pre>
+     * 销毁eip
+     * </pre>
+     */
+    public void expungeEip(com.didiyun.compute.v1.ExpungeEipRequest request,
+        io.grpc.stub.StreamObserver<com.didiyun.compute.v1.ExpungeEipResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getExpungeEipMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * 绑定eip到dc2
      * </pre>
      */
@@ -635,6 +695,16 @@ public final class EipGrpc {
     public com.didiyun.compute.v1.DeleteEipResponse deleteEip(com.didiyun.compute.v1.DeleteEipRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteEipMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * 销毁eip
+     * </pre>
+     */
+    public com.didiyun.compute.v1.ExpungeEipResponse expungeEip(com.didiyun.compute.v1.ExpungeEipRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getExpungeEipMethod(), getCallOptions(), request);
     }
 
     /**
@@ -744,6 +814,17 @@ public final class EipGrpc {
 
     /**
      * <pre>
+     * 销毁eip
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.didiyun.compute.v1.ExpungeEipResponse> expungeEip(
+        com.didiyun.compute.v1.ExpungeEipRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getExpungeEipMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * 绑定eip到dc2
      * </pre>
      */
@@ -771,8 +852,9 @@ public final class EipGrpc {
   private static final int METHODID_CREATE_EIP = 3;
   private static final int METHODID_CHANGE_EIP_BANDWIDTH = 4;
   private static final int METHODID_DELETE_EIP = 5;
-  private static final int METHODID_ATTACH_EIP_TO_DC2 = 6;
-  private static final int METHODID_DETACH_EIP_FROM_DC2 = 7;
+  private static final int METHODID_EXPUNGE_EIP = 6;
+  private static final int METHODID_ATTACH_EIP_TO_DC2 = 7;
+  private static final int METHODID_DETACH_EIP_FROM_DC2 = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -814,6 +896,10 @@ public final class EipGrpc {
         case METHODID_DELETE_EIP:
           serviceImpl.deleteEip((com.didiyun.compute.v1.DeleteEipRequest) request,
               (io.grpc.stub.StreamObserver<com.didiyun.compute.v1.DeleteEipResponse>) responseObserver);
+          break;
+        case METHODID_EXPUNGE_EIP:
+          serviceImpl.expungeEip((com.didiyun.compute.v1.ExpungeEipRequest) request,
+              (io.grpc.stub.StreamObserver<com.didiyun.compute.v1.ExpungeEipResponse>) responseObserver);
           break;
         case METHODID_ATTACH_EIP_TO_DC2:
           serviceImpl.attachEipToDc2((com.didiyun.compute.v1.AttachEipToDc2Request) request,
@@ -890,6 +976,7 @@ public final class EipGrpc {
               .addMethod(getCreateEipMethod())
               .addMethod(getChangeEipBandwidthMethod())
               .addMethod(getDeleteEipMethod())
+              .addMethod(getExpungeEipMethod())
               .addMethod(getAttachEipToDc2Method())
               .addMethod(getDetachEipFromDc2Method())
               .build();
